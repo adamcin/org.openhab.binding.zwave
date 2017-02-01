@@ -14,18 +14,12 @@
       <channel id="alarm_general" typeId="alarm_general">
         <label>Heartbeat</label>
         <properties>
-          <property name="binding:*:OnOffType">ALARM,BASIC;type=HOME_HEALTH</property>
-        </properties>
-      </channel>
-      <channel id="alarm_smoke" typeId="alarm_smoke">
-        <label>Smoke</label>
-        <properties>
-          <property name="binding:*:OnOffType">ALARM,BASIC;type=APPLIANCE</property>
+          <property name="binding:*:OnOffType">COMMAND_CLASS_ALARM,COMMAND_CLASS_BASIC</property>
         </properties>
       </channel>
       <channel id="battery-level" typeId="system.battery-level">
         <properties>
-          <property name="binding:*:PercentType">BATTERY</property>
+          <property name="binding:*:PercentType">COMMAND_CLASS_BATTERY</property>
         </properties>
       </channel>
     </channels>

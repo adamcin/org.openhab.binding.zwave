@@ -16,45 +16,45 @@ Smart Switch 6<br /><h1>Overview</h1><p>Aeon Labs Smart Switch is a Z-Wave power
       <channel id="switch_binary" typeId="switch_binary">
         <label>Switch</label>
         <properties>
-          <property name="binding:*:OnOffType">SWITCH_BINARY,BASIC</property>
+          <property name="binding:*:OnOffType">COMMAND_CLASS_SWITCH_BINARY,COMMAND_CLASS_BASIC</property>
         </properties>
       </channel>
       <channel id="meter_kwh" typeId="meter_kwh">
         <label>Electric meter (kWh)</label>
         <properties>
-          <property name="binding:*:DecimalType">METER;type=E_KWh</property>
+          <property name="binding:*:DecimalType">COMMAND_CLASS_METER;type=E_KWh</property>
         </properties>
       </channel>
       <channel id="meter_current" typeId="meter_current">
         <label>Electric meter (amps)</label>
         <properties>
-          <property name="binding:*:DecimalType">METER;type=E_A</property>
+          <property name="binding:*:DecimalType">COMMAND_CLASS_METER;type=E_A</property>
         </properties>
       </channel>
       <channel id="meter_voltage" typeId="meter_voltage">
         <label>Electric meter (volts)</label>
         <properties>
-          <property name="binding:*:DecimalType">METER;type=E_V</property>
+          <property name="binding:*:DecimalType">COMMAND_CLASS_METER;type=E_V</property>
         </properties>
       </channel>
       <channel id="meter_watts" typeId="meter_watts">
         <label>Electric meter (watts)</label>
         <properties>
-          <property name="binding:*:DecimalType">METER;type=E_W</property>
+          <property name="binding:*:DecimalType">COMMAND_CLASS_METER;type=E_W</property>
         </properties>
       </channel>
       <channel id="meter_reset" typeId="meter_reset">
         <label>Reset Meter</label>
         <properties>
-          <property name="binding:*:OnOffType">METER;reset=true</property>
+          <property name="binding:*:OnOffType">COMMAND_CLASS_METER;reset=true</property>
         </properties>
       </channel>
       <channel id="color_color" typeId="color_color">
         <label>Color</label>
         <properties>
-          <property name="binding:*:HSBType">COLOR;colorMode=RGB</property>
-          <property name="binding:*:PercentType">SWITCH_MULTILEVEL,BASIC;</property>
-          <property name="binding:Command:OnOffType">SWITCH_MULTILEVEL;</property>
+          <property name="binding:*:HSBType">COMMAND_CLASS_SWITCH_COLOR;colorMode=RGB</property>
+          <property name="binding:*:PercentType">COMMAND_CLASS_SWITCH_MULTILEVEL,COMMAND_CLASS_BASIC;</property>
+          <property name="binding:Command:OnOffType">COMMAND_CLASS_SWITCH_MULTILEVEL;</property>
         </properties>
       </channel>
     </channels>
@@ -284,12 +284,12 @@ Group 2 automatic update interval<br /><h1>Overview</h1><p>The time interval of 
       </parameter>
 
       <parameter name="config_113_4" type="integer" groupName="configuration"
-                 min="1" max="2147483647">
+                 min="600" max="1">
         <label>113: Time interval for sending to group 3</label>
         <description><![CDATA[
 Group 3 automatic update interval<br /><h1>Overview</h1><p>The time interval of sending Report group 1 (Valid values 0x01-0xFFFFFFFF).</p> <p>Default value is 600</p> <p>Note: Only up to 0x7fffffff is currently supported</p>
         ]]></description>
-        <default>600</default>
+        <default>2147483647</default>
         <limitToOptions>false</limitToOptions>
       </parameter>
 

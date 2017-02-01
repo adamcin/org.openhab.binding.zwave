@@ -14,19 +14,19 @@
       <channel id="switch_binary" typeId="switch_binary">
         <label>Switch</label>
         <properties>
-          <property name="binding:*:OnOffType">SWITCH_BINARY,BASIC</property>
+          <property name="binding:*:OnOffType">COMMAND_CLASS_SWITCH_BINARY,COMMAND_CLASS_BASIC</property>
         </properties>
       </channel>
       <channel id="switch_binary1" typeId="switch_binary">
         <label>Switch 1</label>
         <properties>
-          <property name="binding:*:OnOffType">SWITCH_BINARY:1,BASIC:1</property>
+          <property name="binding:*:OnOffType">COMMAND_CLASS_SWITCH_BINARY:1,COMMAND_CLASS_BASIC:1</property>
         </properties>
       </channel>
       <channel id="switch_binary2" typeId="switch_binary">
         <label>Switch 2</label>
         <properties>
-          <property name="binding:*:OnOffType">SWITCH_BINARY:2,BASIC:2</property>
+          <property name="binding:*:OnOffType">COMMAND_CLASS_SWITCH_BINARY:2,COMMAND_CLASS_BASIC:2</property>
         </properties>
       </channel>
     </channels>
@@ -74,13 +74,13 @@ Forced auto off period<br /><h1>Overview</h1><p>If Parameter 4 states an auto of
         </options>
       </parameter>
 
-      <parameter name="config_4_2" type="integer" groupName="configuration"
-                 min="0" max="65535">
-        <label>4: Relay 1: OFF-delay time (100ms steps)</label>
+      <parameter name="config_4_1" type="integer" groupName="configuration"
+                 min="0" max="255">
+        <label>4: Relay 1: OFF-delay time (10ms steps)</label>
         <description><![CDATA[
-Automatic turning off relay 1 after set time ...<br /><h1>Overview</h1><p>Default: 0 (Auto off disabled). In 100ms increments.</p>
+Automatic turning off relay 1 after set time ...<br /><h1>Overview</h1><p>in 10ms increments (default: 200ms)</p>
         ]]></description>
-        <default>0</default>
+        <default>20</default>
       </parameter>
 
       <parameter name="config_6_1" type="integer" groupName="configuration">

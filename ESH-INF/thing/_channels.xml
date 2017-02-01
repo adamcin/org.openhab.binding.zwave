@@ -217,7 +217,7 @@
         <label>Smoke alarm</label>
         <description>Indicates if a smoke is triggered
         </description>
-        <category>Door</category>
+        <category>Smoke</category>
         <state readOnly="true">
             <options>
                 <option value="OFF">Ok</option>
@@ -244,7 +244,7 @@
     <!-- Tamper Alarm Channel -->
     <channel-type id="alarm_tamper">
         <item-type>Switch</item-type>
-        <label>Tamper</label>
+        <label>Tamper alarm</label>
         <description>Indicates if the tamper alarm is triggered
         </description>
         <category></category>
@@ -512,6 +512,7 @@
         <item-type>Number</item-type>
         <label>Smoke Alarm</label>
         <description>Smoke Alarm</description>
+        <category>Smoke</category>
         <state readOnly="true">
             <options>
                 <option value="0">Previous Events cleared</option>
@@ -906,6 +907,23 @@
                 <option value="CLOSED">Closed</option>
             </options>
         </state>
+        
+                
+        
+        <config-description>
+            <parameter name="config_offset" type="integer" min="10" max="600">
+                <label>Automatic Update Offset</label>
+                <description><![CDATA[The number of seconds difference in the time before it is reset<br/>
+                Setting this will automatically update the devices clock when the time difference between
+                the device, and the computer exceeds this number of seconds.]]></description>
+                <default>60</default>
+                <options>
+                    <option value="0">Disable Auto Update</option>
+                </options>
+                <limitToOptions>false</limitToOptions>
+            </parameter>
+        </config-description>
+        
     </channel-type>
 
     <!-- Sensor - Flood -->
@@ -1050,7 +1068,7 @@
         </description>
         <category>DimmableLight</category>
          <config-description>
-            <parameter name="config_restoreLastValue" type="boolean">
+            <parameter name="config_restorelastvalue" type="boolean">
                 <label>Restore Last Value</label>
                 <description>Restore Last Dimming level on ON.</description>
                 <default>true</default>
@@ -1066,7 +1084,7 @@
     <channel-type id="thermostat_setpoint">
         <item-type>Number</item-type>
         <label>Heating Setpoint</label>
-        <description>Sets the thermostate setpoint</description>
+        <description>Sets the thermostat setpoint</description>
         <category>Temperature</category>
         <config-description>
             <parameter name="config_scale" type="text">

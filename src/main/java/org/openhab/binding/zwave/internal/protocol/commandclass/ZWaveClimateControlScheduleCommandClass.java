@@ -8,16 +8,9 @@
  */
 package org.openhab.binding.zwave.internal.protocol.commandclass;
 
-import java.io.ByteArrayOutputStream;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Objects;
-
-import org.openhab.binding.zwave.internal.protocol.SerialMessage;
 import org.openhab.binding.zwave.internal.protocol.ZWaveController;
 import org.openhab.binding.zwave.internal.protocol.ZWaveEndpoint;
 import org.openhab.binding.zwave.internal.protocol.ZWaveNode;
-import org.openhab.binding.zwave.internal.protocol.ZWaveSerialMessageException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -30,7 +23,7 @@ import com.thoughtworks.xstream.annotations.XStreamOmitField;
  * @author Chris Jackson
  * @author Max Berger
  */
-@XStreamAlias("climateControlScheduleCommandClass")
+@XStreamAlias("COMMAND_CLASS_CLIMATE_CONTROL_SCHEDULE")
 public class ZWaveClimateControlScheduleCommandClass extends ZWaveCommandClass {
 
     @XStreamOmitField
@@ -63,38 +56,7 @@ public class ZWaveClimateControlScheduleCommandClass extends ZWaveCommandClass {
      */
     @Override
     public CommandClass getCommandClass() {
-        return CommandClass.CLIMATE_CONTROL_SCHEDULE;
-    }
-
-    /**
-     * {@inheritDoc}
-     *
-     * @throws ZWaveSerialMessageException
-     */
-    @Override
-    public void handleApplicationCommandRequest(SerialMessage serialMessage, int offset, int endpoint)
-            throws ZWaveSerialMessageException {
-        logger.debug("NODE {}: Received CLIMATE_CONTROL_SCHEDULE command V{}", this.getNode().getNodeId(),
-                this.getVersion());
-        int command = serialMessage.getMessagePayloadByte(offset);
-        switch (command) {
-            case SCHEDULE_CHANGED_GET:
-                logger.debug("NODE {}: Answering with noop SCHEDULE_CHANGED_REPORT", this.getNode().getNodeId());
-                getController().enqueue(getScheduleChangedReportMessage(SCHEDULE_CHANGE_TEMPORARILY_DISABLED));
-                break;
-            case SCHEDULE_OVERRIDE_REPORT:
-                OverrideType overrideType = OverrideType
-                        .getOverrideTypeFor((byte) (serialMessage.getMessagePayloadByte(offset + 1) & 0x03));
-                ScheduleState scheduleState = ScheduleState
-                        .getScheduleStateFor((byte) serialMessage.getMessagePayloadByte(offset + 2));
-                logger.info("NODE {} reported: Override type: {}, ScheduleState: {}", this.getNode().getNodeId(),
-                        overrideType, scheduleState);
-                break;
-            default:
-                logger.warn(String.format("NODE %d: Unsupported Command %d for command class %s (0x%02X).",
-                        this.getNode().getNodeId(), command, this.getCommandClass().getLabel(),
-                        this.getCommandClass().getKey()));
-        }
+        return CommandClass.COMMAND_CLASS_CLIMATE_CONTROL_SCHEDULE;
     }
 
     // Visible for Testing
