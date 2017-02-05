@@ -13,34 +13,10 @@ Flush PWM Thermostat<br /><h1>Overview</h1><p>This Z-Wave module is used to regu
 
     <!-- CHANNEL DEFINITIONS -->
     <channels>
-      <channel id="sensor_temperature" typeId="sensor_temperature">
+      <channel id="sensor_temperature1" typeId="sensor_temperature">
         <label>Sensor (temperature)</label>
         <properties>
-          <property name="binding:*:DecimalType">SENSOR_MULTILEVEL;type=TEMPERATURE</property>
-        </properties>
-      </channel>
-      <channel id="thermostat_mode" typeId="qubino_zmnhld_00_000_thermostat_mode">
-        <label>Thermostat mode</label>
-        <properties>
-          <property name="binding:*:DecimalType">THERMOSTAT_MODE</property>
-        </properties>
-      </channel>
-      <channel id="thermostat_setpoint_heating" typeId="thermostat_setpoint">
-        <label>Thermostat setpoint</label>
-        <properties>
-          <property name="binding:*:DecimalType">THERMOSTAT_SETPOINT;type=HEATING</property>
-        </properties>
-      </channel>
-      <channel id="sensor_temperature1" typeId="sensor_temperature">
-        <label>Temperature Sensor</label>
-        <properties>
-          <property name="binding:*:DecimalType">SENSOR_MULTILEVEL:1</property>
-        </properties>
-      </channel>
-      <channel id="thermostat_mode1" typeId="qubino_zmnhld_00_000_thermostat_mode">
-        <label>Thermostat mode</label>
-        <properties>
-          <property name="binding:*:DecimalType">THERMOSTAT_MODE:1</property>
+          <property name="binding:*:DecimalType">COMMAND_CLASS_SENSOR_MULTILEVEL:1;type=TEMPERATURE</property>
         </properties>
       </channel>
     </channels>
@@ -50,7 +26,7 @@ Flush PWM Thermostat<br /><h1>Overview</h1><p>This Z-Wave module is used to regu
       <property name="vendor">Goap</property>
       <property name="modelId">ZMNHLD</property>
       <property name="manufacturerId">0159</property>
-      <property name="manufacturerRef">0005:0052,0005:0053</property>
+      <property name="manufacturerRef">0005:0053</property>
       <property name="dbReference">498</property>
       <property name="defaultAssociations">1</property>
     </properties>
@@ -147,7 +123,7 @@ Activate / deactivate ALL ON/ALL OFF<br /><h1>Overview</h1><p>Flush PWM thermost
       <parameter name="config_11_2" type="integer" groupName="configuration">
         <label>11: I1 Functionality selection</label>
         <description>I1 Functionality selection</description>
-        <default>1</default>
+        <default>0</default>
         <options>
           <option value="1">Input I1 changes the mode between Off and Heat/Cool</option>
           <option value="2">Input I1 influences the heating/cooling valves</option>
@@ -523,27 +499,5 @@ Node Id of external battery powered sensor<br /><h1>Overview</h1><p>0 - disabled
     </config-description>
 
   </thing-type>
-
-  <channel-type id="qubino_zmnhld_00_000_thermostat_mode">
-    <item-type>Number</item-type>
-    <label>Thermostat Mode</label>
-    <description>Sets the thermostat mode</description>
-    <category>Temperature</category>
-    <state pattern="%s">
-      <options>
-      </options>
-    </state>
-  </channel-type>
-
-  <channel-type id="qubino_zmnhld_00_000_thermostat_mode">
-    <item-type>Number</item-type>
-    <label>Thermostat Mode</label>
-    <description>Sets the thermostat mode</description>
-    <category>Temperature</category>
-    <state pattern="%s">
-      <options>
-      </options>
-    </state>
-  </channel-type>
 
 </thing:thing-descriptions>

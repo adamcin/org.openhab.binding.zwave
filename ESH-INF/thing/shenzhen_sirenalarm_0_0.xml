@@ -14,18 +14,18 @@
       <channel id="switch_binary" typeId="switch_binary">
         <label>Switch</label>
         <properties>
-          <property name="binding:*:OnOffType">SWITCH_BINARY</property>
+          <property name="binding:*:OnOffType">COMMAND_CLASS_SWITCH_BINARY</property>
         </properties>
       </channel>
       <channel id="alarm_general" typeId="alarm_general">
         <label>Alarm</label>
         <properties>
-          <property name="binding:*:OnOffType">ALARM</property>
+          <property name="binding:*:OnOffType">COMMAND_CLASS_ALARM</property>
         </properties>
       </channel>
       <channel id="battery-level" typeId="system.battery-level">
         <properties>
-          <property name="binding:*:PercentType">BATTERY</property>
+          <property name="binding:*:PercentType">COMMAND_CLASS_BATTERY</property>
         </properties>
       </channel>
     </channels>
@@ -35,7 +35,7 @@
       <property name="vendor">Shenzhen Neo Electronics Co., Ltd</property>
       <property name="modelId">Siren Alarm</property>
       <property name="manufacturerId">0258</property>
-      <property name="manufacturerRef">0003:1088,0003:6088</property>
+      <property name="manufacturerRef">0003:1088</property>
       <property name="dbReference">522</property>
       <property name="defaultAssociations">1,2,3</property>
     </properties>

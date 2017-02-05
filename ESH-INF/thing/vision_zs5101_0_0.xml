@@ -22,7 +22,13 @@ Shock Sensor<br /><h1>Overview</h1><p>ZS5101 detects the vibrations made by an i
       <channel id="alarm_access" typeId="alarm_access">
         <label>Shock Alarm</label>
         <properties>
-          <property name="binding:*:OnOffType">COMMAND_CLASS_ALARM;type=BURGLAR</property>
+          <property name="binding:*:OnOffType">COMMAND_CLASS_ALARM;type=BURGLAR, event=2</property>
+        </properties>
+      </channel>
+      <channel id="alarm_tamper" typeId="alarm_tamper">
+        <label>Tamper Alarm</label>
+        <properties>
+          <property name="binding:*:OnOffType">COMMAND_CLASS_ALARM;type=BURGLAR, event=3</property>
         </properties>
       </channel>
       <channel id="battery-level" typeId="system.battery-level">
