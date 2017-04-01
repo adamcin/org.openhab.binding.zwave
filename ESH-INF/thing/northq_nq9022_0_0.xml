@@ -6,21 +6,21 @@
                       http://eclipse.org/smarthome/schemas/thing-description/v1.0.0">
 
   <thing-type id="northq_nq9022_00_000" listed="false">
-    <label>NQ-9022 Electrical Meter</label>
-    <description>Electrical Meter</description>
+    <label>NQ-9022 NorthQ Electrical Meter</label>
+    <description>NorthQ Electrical Meter</description>
 
     <!-- CHANNEL DEFINITIONS -->
     <channels>
       <channel id="meter_kwh" typeId="meter_kwh">
         <label>Electric meter (kWh)</label>
         <properties>
-          <property name="binding:*:DecimalType">METER;type=E_KWh</property>
+          <property name="binding:*:DecimalType">COMMAND_CLASS_METER;type=E_KWh</property>
         </properties>
       </channel>
       <channel id="time_offset" typeId="time_offset">
         <label>Clock Time Offset</label>
         <properties>
-          <property name="binding:*:DecimalType">TIME_PARAMETERS</property>
+          <property name="binding:*:DecimalType">COMMAND_CLASS_TIME_PARAMETERS</property>
         </properties>
       </channel>
     </channels>
@@ -106,7 +106,7 @@ Wake device up this many times per second. <br /><h1>Overview</h1><p>This value 
       </parameter>
 
       <parameter name="config_9_4" type="integer" groupName="configuration"
-                 min="0" max="65535">
+                 min="1" max="-1">
         <label>9: Pulse count</label>
         <description>Total pulse count (Meter reading / impulse factor)</description>
         <default>0</default>

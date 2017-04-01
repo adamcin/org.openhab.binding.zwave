@@ -20,18 +20,18 @@
       <channel id="alarm_general" typeId="alarm_general">
         <label>Alarm</label>
         <properties>
-          <property name="binding:*:OnOffType">ALARM</property>
+          <property name="binding:*:OnOffType">COMMAND_CLASS_ALARM</property>
         </properties>
       </channel>
-      <channel id="alarm_raw" typeId="alarm_raw">
-        <label>Alarm (raw)</label>
+      <channel id="notification_access_control" typeId="notification_access_control">
+        <label>Alarm (access)</label>
         <properties>
-          <property name="binding:*:OnOffType">ALARM</property>
+          <property name="binding:*:OnOffType">COMMAND_CLASS_ALARM;type=ACCESS_CONTROL</property>
         </properties>
       </channel>
       <channel id="battery-level" typeId="system.battery-level">
         <properties>
-          <property name="binding:*:PercentType">BATTERY</property>
+          <property name="binding:*:PercentType">COMMAND_CLASS_BATTERY</property>
         </properties>
       </channel>
     </channels>
@@ -153,9 +153,9 @@
       </parameter>
 
       <parameter name="config_12_4" type="integer" groupName="configuration"
-                 min="0" max="2147483647">
+                 min="0" max="4294967295">
         <label>12: Electronic Transition Count</label>
-        <default>0</default>
+        <default>2147483647</default>
         <advanced>true</advanced>
       </parameter>
 

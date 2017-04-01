@@ -187,11 +187,11 @@ public class ZWaveBindingConstants {
     }
 
     public static String getI18nConstant(I18nConstant constant) {
-        TranslationProvider translationProviderLocal = translationProvider;
-        if (translationProviderLocal == null) {
+        I18nProvider i18nProviderLocal = i18nProvider;
+        if (i18nProviderLocal == null) {
             return MessageFormat.format(constant.defaultText, (Object[]) null);
         }
-        return translationProviderLocal.getText(ZWaveActivator.getContext().getBundle(), constant.defaultText,
+        return i18nProviderLocal.getText(ZWaveActivator.getContext().getBundle(), constant.defaultText,
                 constant.defaultText, null, (Object[]) null);
     }
 

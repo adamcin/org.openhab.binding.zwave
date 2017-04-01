@@ -16,7 +16,7 @@ FUGA Wall 4-way Switch with LED + Relay<br /><h1>Overview</h1><p>ZHC5010 is a wa
       <channel id="switch_binary" typeId="switch_binary">
         <label>Switch</label>
         <properties>
-          <property name="binding:*:OnOffType">COMMAND_CLASS_SWITCH_BINARY</property>
+          <property name="binding:*:OnOffType">COMMAND_CLASS_SWITCH_BINARY,COMMAND_CLASS_BASIC</property>
         </properties>
       </channel>
       <channel id="switch_dimmer" typeId="switch_dimmer">
@@ -24,19 +24,6 @@ FUGA Wall 4-way Switch with LED + Relay<br /><h1>Overview</h1><p>ZHC5010 is a wa
         <properties>
           <property name="binding:*:PercentType">COMMAND_CLASS_SWITCH_MULTILEVEL</property>
           <property name="binding:Command:OnOffType">COMMAND_CLASS_SWITCH_MULTILEVEL</property>
-        </properties>
-      </channel>
-      <channel id="switch_dimmer" typeId="switch_dimmer">
-        <label>Dimmer</label>
-        <properties>
-          <property name="binding:*:PercentType">COMMAND_CLASS_SWITCH_MULTILEVEL</property>
-          <property name="binding:Command:OnOffType">COMMAND_CLASS_SWITCH_MULTILEVEL</property>
-        </properties>
-      </channel>
-      <channel id="scene_number" typeId="scene_number">
-        <label>Scene Number</label>
-        <properties>
-          <property name="binding:*:DecimalType">COMMAND_CLASS_CENTRAL_SCENE</property>
         </properties>
       </channel>
       <channel id="scene_number" typeId="scene_number">
@@ -48,7 +35,7 @@ FUGA Wall 4-way Switch with LED + Relay<br /><h1>Overview</h1><p>ZHC5010 is a wa
       <channel id="switch_binary1" typeId="switch_binary">
         <label>Switch 1</label>
         <properties>
-          <property name="binding:*:OnOffType">COMMAND_CLASS_SWITCH_BINARY:1</property>
+          <property name="binding:*:OnOffType">COMMAND_CLASS_SWITCH_BINARY:1,COMMAND_CLASS_BASIC:1</property>
         </properties>
       </channel>
       <channel id="switch_dimmer1" typeId="switch_dimmer">
@@ -56,25 +43,12 @@ FUGA Wall 4-way Switch with LED + Relay<br /><h1>Overview</h1><p>ZHC5010 is a wa
         <properties>
           <property name="binding:*:PercentType">COMMAND_CLASS_SWITCH_MULTILEVEL:1</property>
           <property name="binding:Command:OnOffType">COMMAND_CLASS_SWITCH_MULTILEVEL:1</property>
-        </properties>
-      </channel>
-      <channel id="switch_dimmer1" typeId="switch_dimmer">
-        <label>Dimmer 1</label>
-        <properties>
-          <property name="binding:*:PercentType">COMMAND_CLASS_SWITCH_MULTILEVEL:1</property>
-          <property name="binding:Command:OnOffType">COMMAND_CLASS_SWITCH_MULTILEVEL:1</property>
-        </properties>
-      </channel>
-      <channel id="scene_number1" typeId="scene_number">
-        <label>Scene Number 1</label>
-        <properties>
-          <property name="binding:*:DecimalType">COMMAND_CLASS_CENTRAL_SCENE:1</property>
         </properties>
       </channel>
       <channel id="switch_binary2" typeId="switch_binary">
         <label>Switch 2</label>
         <properties>
-          <property name="binding:*:OnOffType">COMMAND_CLASS_SWITCH_BINARY:2</property>
+          <property name="binding:*:OnOffType">COMMAND_CLASS_SWITCH_BINARY:2,COMMAND_CLASS_BASIC:2</property>
         </properties>
       </channel>
       <channel id="switch_dimmer2" typeId="switch_dimmer">
@@ -82,25 +56,12 @@ FUGA Wall 4-way Switch with LED + Relay<br /><h1>Overview</h1><p>ZHC5010 is a wa
         <properties>
           <property name="binding:*:PercentType">COMMAND_CLASS_SWITCH_MULTILEVEL:2</property>
           <property name="binding:Command:OnOffType">COMMAND_CLASS_SWITCH_MULTILEVEL:2</property>
-        </properties>
-      </channel>
-      <channel id="switch_dimmer2" typeId="switch_dimmer">
-        <label>Dimmer 2</label>
-        <properties>
-          <property name="binding:*:PercentType">COMMAND_CLASS_SWITCH_MULTILEVEL:2</property>
-          <property name="binding:Command:OnOffType">COMMAND_CLASS_SWITCH_MULTILEVEL:2</property>
-        </properties>
-      </channel>
-      <channel id="scene_number2" typeId="scene_number">
-        <label>Scene Number 2</label>
-        <properties>
-          <property name="binding:*:DecimalType">COMMAND_CLASS_CENTRAL_SCENE:2</property>
         </properties>
       </channel>
       <channel id="switch_binary3" typeId="switch_binary">
         <label>Switch 3</label>
         <properties>
-          <property name="binding:*:OnOffType">COMMAND_CLASS_SWITCH_BINARY:3</property>
+          <property name="binding:*:OnOffType">COMMAND_CLASS_SWITCH_BINARY:3,COMMAND_CLASS_BASIC:3</property>
         </properties>
       </channel>
       <channel id="switch_dimmer3" typeId="switch_dimmer">
@@ -108,25 +69,12 @@ FUGA Wall 4-way Switch with LED + Relay<br /><h1>Overview</h1><p>ZHC5010 is a wa
         <properties>
           <property name="binding:*:PercentType">COMMAND_CLASS_SWITCH_MULTILEVEL:3</property>
           <property name="binding:Command:OnOffType">COMMAND_CLASS_SWITCH_MULTILEVEL:3</property>
-        </properties>
-      </channel>
-      <channel id="switch_dimmer3" typeId="switch_dimmer">
-        <label>Dimmer 3</label>
-        <properties>
-          <property name="binding:*:PercentType">COMMAND_CLASS_SWITCH_MULTILEVEL:3</property>
-          <property name="binding:Command:OnOffType">COMMAND_CLASS_SWITCH_MULTILEVEL:3</property>
-        </properties>
-      </channel>
-      <channel id="scene_number3" typeId="scene_number">
-        <label>Scene Number 3</label>
-        <properties>
-          <property name="binding:*:DecimalType">COMMAND_CLASS_CENTRAL_SCENE:3</property>
         </properties>
       </channel>
       <channel id="switch_binary4" typeId="switch_binary">
         <label>Switch 4</label>
         <properties>
-          <property name="binding:*:OnOffType">COMMAND_CLASS_SWITCH_BINARY:4</property>
+          <property name="binding:*:OnOffType">COMMAND_CLASS_SWITCH_BINARY:4,COMMAND_CLASS_BASIC:4</property>
         </properties>
       </channel>
       <channel id="switch_dimmer4" typeId="switch_dimmer">
@@ -134,19 +82,6 @@ FUGA Wall 4-way Switch with LED + Relay<br /><h1>Overview</h1><p>ZHC5010 is a wa
         <properties>
           <property name="binding:*:PercentType">COMMAND_CLASS_SWITCH_MULTILEVEL:4</property>
           <property name="binding:Command:OnOffType">COMMAND_CLASS_SWITCH_MULTILEVEL:4</property>
-        </properties>
-      </channel>
-      <channel id="switch_dimmer4" typeId="switch_dimmer">
-        <label>Dimmer 4</label>
-        <properties>
-          <property name="binding:*:PercentType">COMMAND_CLASS_SWITCH_MULTILEVEL:4</property>
-          <property name="binding:Command:OnOffType">COMMAND_CLASS_SWITCH_MULTILEVEL:4</property>
-        </properties>
-      </channel>
-      <channel id="scene_number4" typeId="scene_number">
-        <label>Scene Number 4</label>
-        <properties>
-          <property name="binding:*:DecimalType">COMMAND_CLASS_CENTRAL_SCENE:4</property>
         </properties>
       </channel>
     </channels>
@@ -157,8 +92,7 @@ FUGA Wall 4-way Switch with LED + Relay<br /><h1>Overview</h1><p>ZHC5010 is a wa
       <property name="modelId">ZHC5010</property>
       <property name="manufacturerId">0234</property>
       <property name="manufacturerRef">0002:010A,0003:010A</property>
-      <property name="versionMax">1.3</property>
-      <property name="dbReference">386</property>
+      <property name="dbReference">503</property>
       <property name="defaultAssociations">1</property>
     </properties>
 
@@ -174,7 +108,7 @@ FUGA Wall 4-way Switch with LED + Relay<br /><h1>Overview</h1><p>ZHC5010 is a wa
       <parameter name="config_1_1" type="integer" groupName="configuration">
         <label>1: Upper paddle buttons mode</label>
         <description><![CDATA[
-Configuration of Pair Mode for the upper two buttons (button #1 and #2)<br /><h1>Overview</h1><p>0: Separate mode (toggle mode)</p> <p>1: In pair mode, left side sends on/up commands, right side sends off/down commands</p>
+Pair Mode, upper two buttons<br /><h1>Overview</h1><p>Configuration of Pair Mode for the upper two buttons (button #1 and #2) </p>
         ]]></description>
         <default>0</default>
         <options>

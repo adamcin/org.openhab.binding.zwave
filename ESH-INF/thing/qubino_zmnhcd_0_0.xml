@@ -8,7 +8,7 @@
   <thing-type id="qubino_zmnhcd_00_000" listed="false">
     <label>ZMNHCD Flush Shutter</label>
     <description><![CDATA[
-Flush Shutter<br /><h1>Overview</h1><p>ZMNHCD version S1 for version up to 4.0 </p> <p>To enable endpoint 2 (lamella tilt for venetian blinds), follow the procedure:</p> <ol><li>set Param 71 to 0 -&gt; save ( make sure it has been set really )</li> <li>set Param 71 to 1 -&gt; save ( make sure it has been set really )</li> <li>exclude device from network and delete Node xml, stop openHAB</li> <li>switch off the power supply of the device ( according to the support team this is an alternative to wait 30s )</li> <li>switch on the power supply again and start openHAB</li> <li>include device to the network</li> <li>add the Thing to openhab via HABmin</li> <li>Be patient until the binding until processed all your nodes again</li> </ol>
+Flush Shutter<br /><h1>Overview</h1><p>To enable endpoint 2 (lamella tilt for venetian blinds), follow the procedure:</p> <ol><li>set Param 71 to 0 -&gt; save ( make sure it has been set really )</li> <li>set Param 71 to 1 -&gt; save ( make sure it has been set really )</li> <li>exclude device from network and delete Node xml, stop openHAB</li> <li>switch off the power supply of the device ( according to the support team this is an alternative to wait 30s )</li> <li>switch on the power supply again and start openHAB</li> <li>include device to the network</li> <li>add the Thing to openhab via HABmin</li> <li>Be patient until the binding until processed all your nodes again</li> </ol>
     ]]></description>
 
     <!-- CHANNEL DEFINITIONS -->
@@ -29,6 +29,12 @@ Flush Shutter<br /><h1>Overview</h1><p>ZMNHCD version S1 for version up to 4.0 
       </channel>
       <channel id="sensor_temperature" typeId="sensor_temperature">
         <label>Sensor (temperature)</label>
+        <properties>
+          <property name="binding:*:DecimalType">COMMAND_CLASS_SENSOR_MULTILEVEL;type=TEMPERATURE</property>
+        </properties>
+      </channel>
+      <channel id="meter_kwh" typeId="meter_kwh">
+        <label>Electric meter (kWh)</label>
         <properties>
           <property name="binding:*:DecimalType">COMMAND_CLASS_METER;type=E_KWh</property>
         </properties>
@@ -52,10 +58,11 @@ Flush Shutter<br /><h1>Overview</h1><p>ZMNHCD version S1 for version up to 4.0 
         </properties>
       </channel>
       <channel id="blinds_control1" typeId="blinds_control">
-        <label>Blinds Control 1</label>
+        <label>Blinds control 1</label>
         <properties>
           <property name="binding:*:PercentType">COMMAND_CLASS_SWITCH_MULTILEVEL:1</property>
-          <property name="binding:Command:OnOffType">COMMAND_CLASS_SWITCH_MULTILEVEL:1</property>
+          <property name="binding:Command:StopMoveType">COMMAND_CLASS_SWITCH_MULTILEVEL:1</property>
+          <property name="binding:Command:UpDownType">COMMAND_CLASS_SWITCH_MULTILEVEL:1</property>
         </properties>
       </channel>
       <channel id="meter_kwh1" typeId="meter_kwh">
@@ -77,10 +84,11 @@ Flush Shutter<br /><h1>Overview</h1><p>ZMNHCD version S1 for version up to 4.0 
         </properties>
       </channel>
       <channel id="blinds_control2" typeId="blinds_control">
-        <label>Blinds Control 2</label>
+        <label>Blinds control 2</label>
         <properties>
           <property name="binding:*:PercentType">COMMAND_CLASS_SWITCH_MULTILEVEL:2</property>
-          <property name="binding:Command:OnOffType">COMMAND_CLASS_SWITCH_MULTILEVEL:2</property>
+          <property name="binding:Command:StopMoveType">COMMAND_CLASS_SWITCH_MULTILEVEL:2</property>
+          <property name="binding:Command:UpDownType">COMMAND_CLASS_SWITCH_MULTILEVEL:2</property>
         </properties>
       </channel>
     </channels>
@@ -166,8 +174,8 @@ Slats position after up/down movement.<br /><h1>Overview</h1><p>This parameter d
         <default>1</default>
         <options>
           <option value="0">0 - return to previous position for Z-wave control only</option>
-          <option value="0"></option>
           <option value="1">1 - return to previous position in all cases</option>
+          <option value="2">1 - Slats return UI control, push button, limit, switch or a “STOP” fr</option>
         </options>
       </parameter>
 
@@ -184,7 +192,7 @@ Shutter motor moving time of complete opening or complete closing<br /><h1>Overv
                  min="0" max="127">
         <label>76: Motor operation detection</label>
         <description><![CDATA[
-Power threshold to be interpreted when motor reach the limit switch<br /><h1>Overview</h1><p>Power threshold to be interpreted when motor reach the limit switch. Available configuration parameters (data type is 1 Byte DEC):</p> <ul><li> default value 10 = 10W</li> <li> 0 - 127 = 1-127 W. The value 0 means reaching a limit switch will not be detected</li> </ul><p>NOTE: Motors with power consumption less than 0,5W could not be auto calibrated. In that case set time manually (par. 74).</p>
+Power threshold to be interpreted when motor reach the limit switch<br /><h1>Overview</h1><p>Power threshold to be interpreted when motor reach the limit switch. Available configuration parameters (data type is 1 Byte DEC):</p> <ul><li> default value 6 = 0,6W</li> <li> 5 - 100 (0,5W - 10W), step is 0,1W.</li> </ul><p>NOTE: Motors with power consumption less than 0,5W could not be auto calibrated. In that case set time manually (par. 74).</p>
         ]]></description>
         <default>10</default>
       </parameter>
@@ -217,7 +225,16 @@ Defines if reporting regarding power level, etc is reported to controller.<br />
                  min="0" max="50">
         <label>85: Power consumption max delay time</label>
         <description><![CDATA[
-Time delay for detecting motor errors<br /><h1>Overview</h1><p>This parameter defines the max time before motor power consumption is read after one of the relays is switched ON. If there is no power consumption during this max time (motor not connected, damaged or requires higher time to start, motor in end position,...) the relay will switch OFF. Time is defined by entering it manually. Available configuration parameters (data type is 1 Byte DEC):</p> <ul><li> default value 8 = 800ms</li> <li> 3 - 50 = 0,3seconds - 5seconds (100ms resolution)</li> <li> 0 = time is set automatically</li> </ul>
+Time delay for detecting motor errors<br /><h1>Overview</h1><p>This parameter defines the max time before motor power consumption is read after one of the relays is switched ON. If there is no power consumption during this max time (motor not connected, damaged or requires higher time to start, motor in end position,...) the relay will switch OFF. Time is defined by entering it manually. Available configuration parameters (data type is 1 Byte DEC):</p> <ul><li> default value 8 = 800ms</li> <li> 3 - 50 = 0,3seconds - 5seconds (100ms resolution)</li> </ul>
+        ]]></description>
+        <default>8</default>
+      </parameter>
+
+      <parameter name="config_86_1" type="integer" groupName="configuration"
+                 min="3" max="50">
+        <label>86: Power consumption at limit switch delay time</label>
+        <description><![CDATA[
+Sets the time delay for detecting limit switches<br /><h1>Overview</h1><p>This parameter defines the max time at limit switch, when power consumption is below power threshold. If the power consumption during this time is below power threshold (par. 76), the active output will switch off, means that limit switch is reached. Available configuration parameters (data type is 1 Byte DEC):</p> <ul><li> default value 8 = 800ms</li> <li> 3 - 50 = 0,3seconds - 5seconds (100ms resolution)</li> </ul>
         ]]></description>
         <default>8</default>
       </parameter>

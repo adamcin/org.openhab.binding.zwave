@@ -5,9 +5,9 @@
   xsi:schemaLocation="http://eclipse.org/smarthome/schemas/thing-description/v1.0.0
                       http://eclipse.org/smarthome/schemas/thing-description/v1.0.0">
 
-  <thing-type id="willis_zen23_00_000" listed="false">
-    <label>ZEN23 Wall mounted switch</label>
-    <description>Wall mounted switch</description>
+  <thing-type id="merten_507501_00_000" listed="false">
+    <label>507501 Merten Connect Flush-mounted switch</label>
+    <description>Merten Connect Flush-mounted switch</description>
 
     <!-- CHANNEL DEFINITIONS -->
     <channels>
@@ -21,11 +21,11 @@
 
     <!-- DEVICE PROPERTY DEFINITIONS -->
     <properties>
-      <property name="vendor">Willis Electric Co., Ltd.</property>
-      <property name="modelId">ZEN23</property>
-      <property name="manufacturerId">015D</property>
-      <property name="manufacturerRef">1111:1E1C</property>
-      <property name="dbReference">539</property>
+      <property name="vendor">Merten</property>
+      <property name="modelId">507501</property>
+      <property name="manufacturerId">007A</property>
+      <property name="manufacturerRef">8001:8002</property>
+      <property name="dbReference">547</property>
     </properties>
 
   </thing-type>

@@ -14,7 +14,7 @@
       <channel id="sensor_binary" typeId="sensor_binary">
         <label>Binary Sensor</label>
         <properties>
-          <property name="binding:*:OnOffType">SENSOR_BINARY,BASIC</property>
+          <property name="binding:*:OnOffType">COMMAND_CLASS_SENSOR_BINARY,COMMAND_CLASS_BASIC</property>
         </properties>
       </channel>
       <channel id="alarm_flood" typeId="alarm_flood">
@@ -79,7 +79,7 @@ Setting the BASIC command value<br /><h1>Overview</h1><ul><li>Setting the BASIC 
                  min="0" max="255">
         <label>5: Operation Mode</label>
         <description><![CDATA[
-Operation mode. Using bit to control.<br /><h1>Overview</h1><p>Operation mode. Using bit to control.</p> <ul><li>Bit0: Disable the Flood function.</li> <li>Bit1: Reserve.</li> <li>Bit2: Reserve.</li> <li>Bit3: not applicable for this device variant, set to 0</li> <li>Bit4: Reserve.</li> <li>Bit5: not applicable for this device variant, set to 1</li> <li>Bit6: Reserve.</li> <li>Bit7: Reserve.</li> </ul>
+Operation mode. Using bit to control.<br /><h1>Overview</h1><p>Operation mode. Using bit to control.</p> <ul><li>Bit0: Disable the Flood function.</li> <li>Bit1: Reserve.</li> <li>Bit2: Reserve.</li> <li>Bit3: not applicable for this device variant, set to 0</li> <li>Bit4: Reserve.</li> <li>Bit5: not applicable for this device variant, set to 0</li> <li>Bit6: Reserve.</li> <li>Bit7: Reserve.</li> </ul>
         ]]></description>
         <default>0</default>
         <options>

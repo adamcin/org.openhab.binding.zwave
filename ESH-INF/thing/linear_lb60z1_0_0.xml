@@ -5,34 +5,35 @@
   xsi:schemaLocation="http://eclipse.org/smarthome/schemas/thing-description/v1.0.0
                       http://eclipse.org/smarthome/schemas/thing-description/v1.0.0">
 
-  <thing-type id="mcohome_tps411_00_000" listed="false">
-    <label>TPS411 Touch Panel Switch 1 Button</label>
-    <description>Touch Panel Switch 1 Button</description>
+  <thing-type id="linear_lb60z1_00_000" listed="false">
+    <label>LB60Z-1 Dimmable LED Light Bulb</label>
+    <description>Dimmable LED Light Bulb</description>
 
     <!-- CHANNEL DEFINITIONS -->
     <channels>
       <channel id="switch_binary" typeId="switch_binary">
         <label>Switch</label>
         <properties>
-          <property name="binding:*:OnOffType">COMMAND_CLASS_SWITCH_BINARY,COMMAND_CLASS_BASIC</property>
+          <property name="binding:*:OnOffType">COMMAND_CLASS_SWITCH_BINARY</property>
         </properties>
       </channel>
-      <channel id="switch_binary1" typeId="switch_binary">
-        <label>Switch 1</label>
+      <channel id="switch_dimmer" typeId="switch_dimmer">
+        <label>Dimmer</label>
         <properties>
-          <property name="binding:*:OnOffType">COMMAND_CLASS_SWITCH_BINARY:1,COMMAND_CLASS_BASIC:1</property>
+          <property name="binding:*:PercentType">COMMAND_CLASS_SWITCH_MULTILEVEL,COMMAND_CLASS_BASIC</property>
+          <property name="binding:Command:OnOffType">COMMAND_CLASS_SWITCH_MULTILEVEL,COMMAND_CLASS_BASIC</property>
         </properties>
       </channel>
     </channels>
 
     <!-- DEVICE PROPERTY DEFINITIONS -->
     <properties>
-      <property name="vendor">McoHome Technology Co., Ltd</property>
-      <property name="modelId">TPS411</property>
-      <property name="manufacturerId">015F</property>
-      <property name="manufacturerRef">4111:1302</property>
-      <property name="dbReference">526</property>
-      <property name="defaultAssociations">2</property>
+      <property name="vendor">Linear Corp</property>
+      <property name="modelId">LB60Z-1</property>
+      <property name="manufacturerId">014F</property>
+      <property name="manufacturerRef">4754:3038</property>
+      <property name="dbReference">8</property>
+      <property name="defaultAssociations">1</property>
     </properties>
 
     <!-- CONFIGURATION DESCRIPTIONS -->
@@ -45,12 +46,14 @@
       </parameter-group>
 
       <parameter name="config_1_1" type="integer" groupName="configuration">
-        <label>1: Saving state before power failure</label>
-        <description>Switch state saved or not when power down</description>
-        <default>1</default>
+        <label>1: Dim Level Memory</label>
+        <description><![CDATA[
+Dim Settings<br /><h1>Overview</h1><p>By default, the LB60Z-1 bulb will go to full brightness when turned on. To have the bulb turn on to the last dim level setting, set parameter 1 to 1.</p>
+        ]]></description>
+        <default>0</default>
         <options>
-          <option value="0">Disabled</option>
-          <option value="1">Enabled</option>
+          <option value="0">Disable dim level memory</option>
+          <option value="1">Enable dim level memory</option>
         </options>
       </parameter>
 
@@ -61,12 +64,8 @@
       </parameter-group>
 
       <parameter name="group_1" type="text" groupName="association" multiple="true">
-        <label>1: Switch Button Group 1</label>
+        <label>1: Lifeline</label>
         <multipleLimit>5</multipleLimit>
-      </parameter>
-
-      <parameter name="group_2" type="text" groupName="association">
-        <label>2: All Status Reports</label>
       </parameter>
 
     </config-description>
