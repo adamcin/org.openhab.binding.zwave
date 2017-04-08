@@ -20,7 +20,7 @@
       <channel id="alarm_smoke" typeId="alarm_smoke">
         <label>Tamper Switch</label>
         <properties>
-          <property name="binding:*:OnOffType">ALARM</property>
+          <property name="binding:*:OnOffType">COMMAND_CLASS_ALARM</property>
         </properties>
       </channel>
       <channel id="battery-level" typeId="system.battery-level">

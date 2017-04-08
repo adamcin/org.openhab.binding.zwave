@@ -14,30 +14,30 @@
       <channel id="lock_door" typeId="lock_door">
         <label>Door Lock</label>
         <properties>
-          <property name="binding:*:OnOffType">DOOR_LOCK</property>
+          <property name="binding:*:OnOffType">COMMAND_CLASS_DOOR_LOCK</property>
         </properties>
       </channel>
       <channel id="alarm_access" typeId="alarm_access">
         <label>Alarm (access)</label>
         <properties>
-          <property name="binding:*:OnOffType">ALARM;type=ACCESS_CONTROL</property>
+          <property name="binding:*:OnOffType">COMMAND_CLASS_ALARM;type=ACCESS_CONTROL</property>
         </properties>
       </channel>
       <channel id="alarm_power" typeId="alarm_power">
         <label>Alarm (power)</label>
         <properties>
-          <property name="binding:*:OnOffType">ALARM;type=POWER_MANAGEMENT</property>
+          <property name="binding:*:OnOffType">COMMAND_CLASS_ALARM;type=POWER_MANAGEMENT</property>
         </properties>
       </channel>
       <channel id="alarm_system" typeId="alarm_system">
         <label>Alarm (system)</label>
         <properties>
-          <property name="binding:*:OnOffType">ALARM;type=SYSTEM</property>
+          <property name="binding:*:OnOffType">COMMAND_CLASS_ALARM;type=SYSTEM</property>
         </properties>
       </channel>
       <channel id="battery-level" typeId="system.battery-level">
         <properties>
-          <property name="binding:*:PercentType">BATTERY</property>
+          <property name="binding:*:PercentType">COMMAND_CLASS_BATTERY</property>
         </properties>
       </channel>
     </channels>

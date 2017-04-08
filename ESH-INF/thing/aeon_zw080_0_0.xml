@@ -16,7 +16,13 @@ Siren Gen5<br /><h1>Overview</h1><p>Update command classes -:<br />METER:5 :: AD
       <channel id="switch_binary" typeId="switch_binary">
         <label>Switch</label>
         <properties>
-          <property name="binding:*:OnOffType">COMMAND_CLASS_SWITCH_BINARY</property>
+          <property name="binding:*:OnOffType">COMMAND_CLASS_SWITCH_BINARY,COMMAND_CLASS_BASIC</property>
+        </properties>
+      </channel>
+      <channel id="config_decimal_param37" typeId="aeon_zw080_00_000_config_decimal_param37">
+        <label>Sound and Volume</label>
+        <properties>
+          <property name="binding:*:DecimalType">COMMAND_CLASS_CONFIGURATION;parameter=37</property>
         </properties>
       </channel>
     </channels>
