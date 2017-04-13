@@ -16,18 +16,18 @@ Water Sensor<br /><h1>Overview</h1><p>Zooz Water Sensor ZSE30</p> <ul><li>Reliab
       <channel id="sensor_binary" typeId="sensor_binary">
         <label>Binary Sensor</label>
         <properties>
-          <property name="binding:*:OnOffType">SENSOR_BINARY</property>
+          <property name="binding:*:OnOffType">COMMAND_CLASS_SENSOR_BINARY</property>
         </properties>
       </channel>
       <channel id="alarm_flood" typeId="alarm_flood">
         <label>Alarm (flood)</label>
         <properties>
-          <property name="binding:*:OnOffType">ALARM;type=FLOOD</property>
+          <property name="binding:*:OnOffType">COMMAND_CLASS_ALARM;type=FLOOD</property>
         </properties>
       </channel>
       <channel id="battery-level" typeId="system.battery-level">
         <properties>
-          <property name="binding:*:PercentType">BATTERY</property>
+          <property name="binding:*:PercentType">COMMAND_CLASS_BATTERY</property>
         </properties>
       </channel>
     </channels>
