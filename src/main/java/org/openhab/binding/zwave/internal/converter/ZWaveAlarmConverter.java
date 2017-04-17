@@ -40,7 +40,7 @@ import org.slf4j.LoggerFactory;
  */
 public class ZWaveAlarmConverter extends ZWaveCommandClassConverter {
 
-    private final static Logger logger = LoggerFactory.getLogger(ZWaveAlarmConverter.class);
+    private final Logger logger = LoggerFactory.getLogger(ZWaveAlarmConverter.class);
 
     private static Map<String, Map<NotificationEvent, State>> notifications = new HashMap<String, Map<NotificationEvent, State>>();
 
