@@ -16,12 +16,12 @@ Battery powered One paddle wall controller<br /><h2>Inclusion Information</h2><p
       <channel id="switch_binary" typeId="switch_binary">
         <label>Switch</label>
         <properties>
-          <property name="binding:*:OnOffType">BASIC</property>
+          <property name="binding:*:OnOffType">COMMAND_CLASS_BASIC</property>
         </properties>
       </channel>
       <channel id="battery-level" typeId="system.battery-level">
         <properties>
-          <property name="binding:*:PercentType">BATTERY</property>
+          <property name="binding:*:PercentType">COMMAND_CLASS_BATTERY</property>
         </properties>
       </channel>
     </channels>

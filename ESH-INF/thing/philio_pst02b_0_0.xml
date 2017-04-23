@@ -97,13 +97,13 @@ Mode of operation and enabled multisensor functions<br /><h1>Overview</h1><p>Bit
         <default>0</default>
       </parameter>
 
-      <parameter name="config_6_1" type="integer" groupName="configuration"
-                 min="0" max="63">
-        <label>6: Multisensor Function Switch</label>
-        <description><![CDATA[
-Enable or disable functions of the multisensor.<br /><h1>Overview</h1><p>Bitfield for enabling or disabling functions of the multisensor.</p> <ul><li>Bit 0: Disable magnetic integrate illumination.</li> <li>Bit 1: Disable PIR integrate Illumination.</li> <li>Bit 2: Disable magnetic integrate PIR (Default is 1 = disabled).</li> <li>Bit 3: When bit 2 is 0 (enabled), is the device is installed in the same room as the light? 0 = In the same room; 1 = In another room. <ul><li>Note: If this bit is 1, it is recommended to also set bit 1 to 1, because when the PIR triggered, it doesn't mean that a person is in the room where the lights are.</li> </ul></li> <li>Bit 4: Disable the 5 seconds delay to turn off the light, when door/window is closed.</li> <li>Bit 5: Disable auto turn off the light, after door/window opened to turn on the light. <ul><li><em>Note: If bit 2 is 0, this setting has no effect.</em></li> <li><em>Note: If configuration parameter is 0, </em><em>this setting has no effect.</em></li> </ul></li> <li>Bit 6: Reserved</li> <li>Bit 7: Reserved</li> </ul>
-        ]]></description>
+      <parameter name="config_6_1" type="integer" groupName="configuration">
+        <label>6: Multi-Sensor Function Switch</label>
+        <description>Bit 0: Disable magnetic integrate illumination. Bit 1: Disable PIR integrate Illumination. Bit 2: Disable magnetic integrate PIR (Default is Disable) Bit 3: When Bit2 is 0 (Enable), the device is install in the same room with the light? 0: In the same roo</description>
         <default>4</default>
+        <options>
+          <option value="7">Customer Function</option>
+        </options>
       </parameter>
 
       <parameter name="config_7_1" type="integer" groupName="configuration"

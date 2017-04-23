@@ -118,23 +118,21 @@
       <parameter name="config_1_2" type="integer" groupName="configuration"
                  min="0" max="32000">
         <label>1: Voltage</label>
-        <description>Voltage to calculate wattage from amperage.</description>
+        <description>Voltage to calculate wattage from amperage. Values represent voltage.</description>
         <default>240</default>
       </parameter>
 
       <parameter name="config_3_1" type="integer" groupName="configuration"
-                 min="0" max="15">
+                 min="0" max="1">
         <label>3: Selective Reporting</label>
-        <description><![CDATA[
-Enable/disable selective reporting <br /><h1>Overview</h1><p>When selective reporting is disabled, unit will send a report every X seconds, as configured in items 101-103. When selective reporting is enabled, unit will send a report if thresholds in items 4-7, or percentages in items 8-11, are exceeded. This is used to reduce network traffic. Sum the following values for the source of the reports to be selectively reported:</p> <p>0        -&gt;   Disable Selective Reporting</p> <p>1        -&gt;   Whole HEM</p> <p>2        -&gt;   Clamp 1</p> <p>4        -&gt;   Clamp 2</p> <p>8        -&gt;   Clamp 3</p>
-        ]]></description>
+        <description>Enable selective reporting only when power change reaches a certain threshold or percentage set in 4-11 below. This is used to reduce network traffic. (0 == disable, 1 == enable)</description>
         <default>0</default>
       </parameter>
 
       <parameter name="config_4_2" type="integer" groupName="configuration"
                  min="0" max="60000">
         <label>4: Current Threshold - Whole HEM</label>
-        <description>Threshold change in wattage to induce an automatic report (Whole HEM).</description>
+        <description>Threshold change in wattage to induce an automatic report (Whole HEM). (Valid values 0-60000)</description>
         <default>50</default>
       </parameter>
 
