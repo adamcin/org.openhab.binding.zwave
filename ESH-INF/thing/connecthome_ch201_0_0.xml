@@ -14,55 +14,55 @@
       <channel id="sensor_temperature" typeId="sensor_temperature">
         <label>Sensor (temperature)</label>
         <properties>
-          <property name="binding:*:DecimalType">SENSOR_MULTILEVEL;type=TEMPERATURE</property>
+          <property name="binding:*:DecimalType">COMMAND_CLASS_SENSOR_MULTILEVEL;type=TEMPERATURE</property>
         </properties>
       </channel>
       <channel id="thermostat_mode" typeId="connecthome_ch201_00_000_thermostat_mode">
         <label>Thermostat mode</label>
         <properties>
-          <property name="binding:*:DecimalType">THERMOSTAT_MODE</property>
+          <property name="binding:*:DecimalType">COMMAND_CLASS_THERMOSTAT_MODE</property>
         </properties>
       </channel>
       <channel id="thermostat_state" typeId="thermostat_state">
         <label>Thermostat Operating State</label>
         <properties>
-          <property name="binding:*:DecimalType">THERMOSTAT_OPERATING_STATE</property>
+          <property name="binding:*:DecimalType">COMMAND_CLASS_THERMOSTAT_OPERATING_STATE</property>
         </properties>
       </channel>
       <channel id="thermostat_setpoint_heating" typeId="thermostat_setpoint">
         <label>Setpoint (heating)</label>
         <properties>
-          <property name="binding:*:DecimalType">THERMOSTAT_SETPOINT;type=HEATING</property>
+          <property name="binding:*:DecimalType">COMMAND_CLASS_THERMOSTAT_SETPOINT;type=HEATING</property>
         </properties>
       </channel>
       <channel id="sensor_temperature1" typeId="sensor_temperature">
         <label>Sensor (temperature) 1</label>
         <properties>
-          <property name="binding:*:DecimalType">SENSOR_MULTILEVEL:1;type=TEMPERATURE</property>
+          <property name="binding:*:DecimalType">COMMAND_CLASS_SENSOR_MULTILEVEL:1;type=TEMPERATURE</property>
         </properties>
       </channel>
       <channel id="thermostat_mode1" typeId="connecthome_ch201_00_000_thermostat_mode">
         <label>Thermostat mode 1</label>
         <properties>
-          <property name="binding:*:DecimalType">THERMOSTAT_MODE:1</property>
+          <property name="binding:*:DecimalType">COMMAND_CLASS_THERMOSTAT_MODE:1</property>
         </properties>
       </channel>
       <channel id="thermostat_state1" typeId="thermostat_state">
         <label>Thermostat Operating State 1</label>
         <properties>
-          <property name="binding:*:DecimalType">THERMOSTAT_OPERATING_STATE:1</property>
+          <property name="binding:*:DecimalType">COMMAND_CLASS_THERMOSTAT_OPERATING_STATE:1</property>
         </properties>
       </channel>
       <channel id="thermostat_setpoint_heating1" typeId="thermostat_setpoint">
         <label>Setpoint (heating) 1</label>
         <properties>
-          <property name="binding:*:DecimalType">THERMOSTAT_SETPOINT:1;type=HEATING</property>
+          <property name="binding:*:DecimalType">COMMAND_CLASS_THERMOSTAT_SETPOINT:1;type=HEATING</property>
         </properties>
       </channel>
       <channel id="sensor_temperature2" typeId="sensor_temperature">
         <label>Sensor (temperature) 2</label>
         <properties>
-          <property name="binding:*:DecimalType">SENSOR_MULTILEVEL:2,BASIC:2;type=TEMPERATURE</property>
+          <property name="binding:*:DecimalType">COMMAND_CLASS_SENSOR_MULTILEVEL:2,COMMAND_CLASS_BASIC:2;type=TEMPERATURE</property>
         </properties>
       </channel>
     </channels>
