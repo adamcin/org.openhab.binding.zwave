@@ -16,7 +16,7 @@ Battery Powered Wall Controller<br /><h1>Overview</h1><p><strong>Single-surface 
       <channel id="switch_binary" typeId="switch_binary">
         <label>Switch</label>
         <properties>
-          <property name="binding:*:OnOffType">BASIC</property>
+          <property name="binding:*:OnOffType">COMMAND_CLASS_BASIC</property>
         </properties>
       </channel>
     </channels>

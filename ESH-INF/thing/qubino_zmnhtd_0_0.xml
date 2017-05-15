@@ -16,61 +16,61 @@ Smart Meter<br /><h1>Overview</h1><p>This Z-Wave module is used for energy measu
       <channel id="switch_binary" typeId="switch_binary">
         <label></label>
         <properties>
-          <property name="binding:*:OnOffType">SWITCH_BINARY</property>
+          <property name="binding:*:OnOffType">COMMAND_CLASS_SWITCH_BINARY</property>
         </properties>
       </channel>
       <channel id="meter_powerfactor" typeId="meter_powerfactor">
         <label>Power factor</label>
         <properties>
-          <property name="binding:*:DecimalType">METER;type=E_Power_Factor</property>
+          <property name="binding:*:DecimalType">COMMAND_CLASS_METER</property>
         </properties>
       </channel>
       <channel id="meter_voltage" typeId="meter_voltage">
         <label>Votage</label>
         <properties>
-          <property name="binding:*:DecimalType">METER;type=E_V</property>
+          <property name="binding:*:DecimalType">COMMAND_CLASS_METER</property>
         </properties>
       </channel>
       <channel id="meter_watts" typeId="meter_watts">
         <label>Active Power</label>
         <properties>
-          <property name="binding:*:DecimalType">METER;type=E_W</property>
+          <property name="binding:*:DecimalType">COMMAND_CLASS_METER</property>
         </properties>
       </channel>
       <channel id="meter_kwh" typeId="meter_kwh">
         <label>Active Energy Comsumption</label>
         <properties>
-          <property name="binding:*:DecimalType">METER;type=E_KWh</property>
+          <property name="binding:*:DecimalType">COMMAND_CLASS_METER</property>
         </properties>
       </channel>
       <channel id="meter_kvah" typeId="meter_kvah">
-        <label>Aparent Energy Consumption</label>
+        <label>Reactive Energy Consumption</label>
         <properties>
-          <property name="binding:*:DecimalType">METER;type=E_KVAh</property>
+          <property name="binding:*:DecimalType">COMMAND_CLASS_METER</property>
         </properties>
       </channel>
       <channel id="meter_current" typeId="meter_current">
         <label>Current</label>
         <properties>
-          <property name="binding:*:DecimalType">METER;type=E_A</property>
+          <property name="binding:*:DecimalType">COMMAND_CLASS_METER</property>
         </properties>
       </channel>
       <channel id="meter_reset" typeId="meter_reset">
         <label>Reset Meter Stats</label>
         <properties>
-          <property name="binding:*:OnOffType">METER</property>
+          <property name="binding:*:OnOffType">COMMAND_CLASS_METER</property>
         </properties>
       </channel>
       <channel id="switch_binary1" typeId="switch_binary">
         <label>switch_binary</label>
         <properties>
-          <property name="binding:*:OnOffType">SWITCH_BINARY:1,BASIC:1</property>
+          <property name="binding:*:OnOffType">COMMAND_CLASS_SWITCH_BINARY:1,COMMAND_CLASS_BASIC:1</property>
         </properties>
       </channel>
       <channel id="switch_binary2" typeId="switch_binary">
         <label>Switch Relay</label>
         <properties>
-          <property name="binding:*:OnOffType">SWITCH_BINARY:2,BASIC:2</property>
+          <property name="binding:*:OnOffType">COMMAND_CLASS_SWITCH_BINARY:2,COMMAND_CLASS_BASIC:2</property>
         </properties>
       </channel>
     </channels>
