@@ -14,29 +14,29 @@
       <channel id="switch_dimmer" typeId="switch_dimmer">
         <label>Dimmer</label>
         <properties>
-          <property name="binding:*:PercentType">SWITCH_MULTILEVEL,BASIC</property>
-          <property name="binding:Command:OnOffType">SWITCH_MULTILEVEL,BASIC</property>
+          <property name="binding:*:PercentType">COMMAND_CLASS_SWITCH_MULTILEVEL,COMMAND_CLASS_BASIC</property>
+          <property name="binding:Command:OnOffType">COMMAND_CLASS_SWITCH_MULTILEVEL,COMMAND_CLASS_BASIC</property>
         </properties>
       </channel>
       <channel id="scene_number" typeId="scene_number">
         <label>Scene Number</label>
         <properties>
-          <property name="binding:*:DecimalType">SCENE_ACTIVATION</property>
+          <property name="binding:*:DecimalType">COMMAND_CLASS_SCENE_ACTIVATION</property>
         </properties>
       </channel>
       <channel id="color_color" typeId="color_color">
         <label>Color Control</label>
         <properties>
-          <property name="binding:*:HSBType">COLOR;colorMode=RGB</property>
-          <property name="binding:*:PercentType">SWITCH_MULTILEVEL,BASIC;</property>
-          <property name="binding:Command:OnOffType">SWITCH_MULTILEVEL;</property>
+          <property name="binding:*:HSBType">COMMAND_CLASS_SWITCH_COLOR;</property>
+          <property name="binding:*:PercentType">COMMAND_CLASS_SWITCH_MULTILEVEL,COMMAND_CLASS_BASIC;</property>
+          <property name="binding:Command:OnOffType">COMMAND_CLASS_SWITCH_MULTILEVEL;</property>
         </properties>
       </channel>
       <channel id="color_temperature" typeId="color_temperature">
         <label>Color Temperature</label>
         <properties>
-          <property name="binding:*:PercentType">COLOR;colorMode=DIFF_WHITE</property>
-          <property name="binding:Command:OnOffType">SWITCH_MULTILEVEL;</property>
+          <property name="binding:*:PercentType">COMMAND_CLASS_SWITCH_COLOR;;colorMode=DIFF_WHITE</property>
+          <property name="binding:Command:OnOffType">COMMAND_CLASS_SWITCH_MULTILEVEL;</property>
         </properties>
       </channel>
     </channels>
@@ -46,7 +46,7 @@
       <property name="vendor">Hank</property>
       <property name="modelId">RGB bulb</property>
       <property name="manufacturerId">0208</property>
-      <property name="manufacturerRef">0100:0004,0101:0004</property>
+      <property name="manufacturerRef">0100:0004</property>
       <property name="dbReference">598</property>
       <property name="defaultAssociations">1</property>
     </properties>
@@ -78,7 +78,6 @@ RGB BULB can send notifications to associated device <br /><h1>Overview</h1><p>R
         ]]></description>
         <default>1</default>
         <options>
-          <option value="0">Notifications Disabled</option>
           <option value="1">Send BASIC REPORT</option>
           <option value="2">Send BASIC REPORT only without status change</option>
         </options>
