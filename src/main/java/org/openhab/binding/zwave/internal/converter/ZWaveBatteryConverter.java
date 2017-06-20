@@ -11,7 +11,7 @@ package org.openhab.binding.zwave.internal.converter;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.eclipse.smarthome.core.library.types.DecimalType;
+import org.eclipse.smarthome.core.library.types.PercentType;
 import org.eclipse.smarthome.core.types.State;
 import org.openhab.binding.zwave.handler.ZWaveControllerHandler;
 import org.openhab.binding.zwave.handler.ZWaveThingChannel;
@@ -69,12 +69,12 @@ public class ZWaveBatteryConverter extends ZWaveCommandClassConverter {
     @Override
     public State handleEvent(ZWaveThingChannel channel, ZWaveCommandClassValueEvent event) {
         Integer value = (Integer) event.getValue();
-        if (value < 0) {
-            value = 0;
-        } else if (value > 100) {
+        if (value > 100) {
             value = 100;
+        } else if (value < 0) {
+            value = 0;
         }
-        return new DecimalType(value);
+        return new PercentType(value);
     }
 
     /**
