@@ -27,7 +27,7 @@
       <channel id="sensor_general" typeId="sensor_general">
         <label>Sensor (general)</label>
         <properties>
-          <property name="binding:*:DecimalType">SENSOR_MULTILEVEL;type=GENERAL</property>
+          <property name="binding:*:DecimalType">COMMAND_CLASS_SENSOR_MULTILEVEL;type=GENERAL</property>
         </properties>
       </channel>
     </channels>
