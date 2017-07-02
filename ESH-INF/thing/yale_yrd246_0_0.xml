@@ -133,6 +133,17 @@ Incorrect PINs lockout time<br /><h1>Overview</h1><p>Amount of time to lock-out 
         <advanced>true</advanced>
       </parameter>
 
+      <!-- ASSOCIATION DEFINITIONS -->
+      <parameter-group name="association">
+        <context>link</context>
+        <label>Association Groups</label>
+      </parameter-group>
+
+      <parameter name="group_1" type="text" groupName="association" multiple="true">
+        <label>1: Lifeline</label>
+        <multipleLimit>5</multipleLimit>
+      </parameter>
+
     </config-description>
 
   </thing-type>
