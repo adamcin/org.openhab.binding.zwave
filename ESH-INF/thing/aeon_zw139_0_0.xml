@@ -16,25 +16,25 @@ Nano Switch Gen5 (without meter)<br /><h1>Overview</h1><p>Once installed behind 
       <channel id="switch_binary" typeId="switch_binary">
         <label>Switch</label>
         <properties>
-          <property name="binding:*:OnOffType">SWITCH_BINARY,BASIC</property>
+          <property name="binding:*:OnOffType">COMMAND_CLASS_SWITCH_BINARY,COMMAND_CLASS_BASIC</property>
         </properties>
       </channel>
       <channel id="scene_number" typeId="scene_number">
         <label>Scene Number</label>
         <properties>
-          <property name="binding:*:DecimalType">SCENE_ACTIVATION</property>
+          <property name="binding:*:DecimalType">COMMAND_CLASS_SCENE_ACTIVATION</property>
         </properties>
       </channel>
       <channel id="alarm_heat" typeId="alarm_heat">
         <label>Alarm (heat)</label>
         <properties>
-          <property name="binding:*:OnOffType">ALARM;type=HEAT</property>
+          <property name="binding:*:OnOffType">COMMAND_CLASS_ALARM;type=HEAT</property>
         </properties>
       </channel>
       <channel id="time_offset" typeId="time_offset">
         <label>Clock Time Offset</label>
         <properties>
-          <property name="binding:*:DecimalType">CLOCK</property>
+          <property name="binding:*:DecimalType">COMMAND_CLASS_CLOCK</property>
         </properties>
       </channel>
     </channels>
@@ -44,7 +44,7 @@ Nano Switch Gen5 (without meter)<br /><h1>Overview</h1><p>Once installed behind 
       <property name="vendor">AEON Labs</property>
       <property name="modelId">ZW139</property>
       <property name="manufacturerId">0086</property>
-      <property name="manufacturerRef">0003:008B,0103:008B,0203:008B</property>
+      <property name="manufacturerRef">0003:008B</property>
       <property name="dbReference">648</property>
       <property name="defaultAssociations">1</property>
     </properties>
@@ -131,7 +131,7 @@ Configure the state of LED when it is in 3 modes<br /><h1>Overview</h1><p>Config
       </parameter>
 
       <parameter name="config_84_4" type="integer" groupName="configuration"
-                 min="0" max="16777276">
+                 min="0" max="4294967295">
         <label>84: Night light mode LED state</label>
         <description><![CDATA[
 Set the ON/OFF time of the LED when it is in Night light mode<br /><h1>Overview</h1><p>0 to 60 The minute time of OFF 256 to 316 The hour time of OFF 65536 to 65596 The minute time of ON 16777216 to 16777276 The hour time of ON</p>
@@ -151,7 +151,7 @@ Set the ON time of output load.<br /><h1>Overview</h1><p>65536 to 65543 The day 
       </parameter>
 
       <parameter name="config_87_4" type="integer" groupName="configuration"
-                 min="0" max="16777216">
+                 min="0" max="4294967295">
         <label>87: Set appointment 2</label>
         <description><![CDATA[
 Set the OFF time of output load<br /><h1>Overview</h1><p>256 to 316 The hour value of ON time 65536 to 65543 The day value (Mon to Sun) 16777215 Disable the setting. 0 to 60 The minute value of ON time 16777216 Enable the setting.</p>
