@@ -27,7 +27,7 @@
       <channel id="config_decimal_param40" typeId="config_decimal">
         <label>Updating the dimming level without switch</label>
         <properties>
-          <property name="binding:*:DecimalType">CONFIGURATION;parameter=40</property>
+          <property name="binding:*:DecimalType">COMMAND_CLASS_CONFIGURATION;parameter=40</property>
         </properties>
       </channel>
     </channels>
