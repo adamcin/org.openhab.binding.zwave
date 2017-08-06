@@ -14,7 +14,7 @@
       <channel id="switch_binary" typeId="switch_binary">
         <label>Switch</label>
         <properties>
-          <property name="binding:*:OnOffType">SWITCH_BINARY,BASIC</property>
+          <property name="binding:*:OnOffType">COMMAND_CLASS_SWITCH_BINARY,COMMAND_CLASS_BASIC</property>
         </properties>
       </channel>
     </channels>
@@ -24,7 +24,7 @@
       <property name="vendor">Zooz</property>
       <property name="modelId">ZEN23</property>
       <property name="manufacturerId">027A</property>
-      <property name="manufacturerRef">1111:1E1C,B111:251C</property>
+      <property name="manufacturerRef">1111:1E1C</property>
       <property name="dbReference">649</property>
       <property name="defaultAssociations">1</property>
     </properties>
