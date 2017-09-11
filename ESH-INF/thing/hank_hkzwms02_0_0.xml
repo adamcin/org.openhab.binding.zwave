@@ -6,20 +6,20 @@
                       http://eclipse.org/smarthome/schemas/thing-description/v1.0.0">
 
   <thing-type id="hank_hkzwms02_00_000" listed="false">
-    <label>HKZW_MS02 Motion Sensor</label>
-    <description>Motion Sensor</description>
+    <label>HKZW_MS02 Hank Motion Sensor</label>
+    <description>Hank Motion Sensor</description>
 
     <!-- CHANNEL DEFINITIONS -->
     <channels>
       <channel id="alarm_burglar" typeId="alarm_burglar">
         <label>Alarm (burglar)</label>
         <properties>
-          <property name="binding:*:OnOffType">ALARM,BASIC;type=BURGLAR</property>
+          <property name="binding:*:OnOffType">COMMAND_CLASS_ALARM;type=BURGLAR</property>
         </properties>
       </channel>
       <channel id="battery-level" typeId="system.battery-level">
         <properties>
-          <property name="binding:*:PercentType">BATTERY</property>
+          <property name="binding:*:PercentType">COMMAND_CLASS_BATTERY</property>
         </properties>
       </channel>
     </channels>
@@ -31,7 +31,7 @@
       <property name="manufacturerId">0208</property>
       <property name="manufacturerRef">0201:0012</property>
       <property name="dbReference">676</property>
-      <property name="commandClass:ASSOCIATION">14</property>
+      <property name="commandClass:COMMAND_CLASS_ASSOCIATION">14</property>
       <property name="defaultAssociations">1,2</property>
     </properties>
 
@@ -70,8 +70,8 @@
         <description>assigned to send Basic Set Command</description>
         <default>0</default>
         <options>
-          <option value="0">Disable</option>
-          <option value="1">Enable</option>
+          <option value="0">send 255</option>
+          <option value="1">send 0</option>
         </options>
       </parameter>
 

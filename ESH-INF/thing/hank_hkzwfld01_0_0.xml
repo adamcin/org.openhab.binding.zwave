@@ -6,38 +6,38 @@
                       http://eclipse.org/smarthome/schemas/thing-description/v1.0.0">
 
   <thing-type id="hank_hkzwfld01_00_000" listed="false">
-    <label>HKZW_FLD01 Flood Sensor FLD01</label>
-    <description>Flood Sensor FLD01</description>
+    <label>HKZW_FLD01 Hank Flood Sensor FLD01</label>
+    <description>Hank Flood Sensor FLD01</description>
 
     <!-- CHANNEL DEFINITIONS -->
     <channels>
       <channel id="sensor_temperature" typeId="sensor_temperature">
         <label>Sensor (temperature)</label>
         <properties>
-          <property name="binding:*:DecimalType">SENSOR_MULTILEVEL,BASIC;type=TEMPERATURE</property>
+          <property name="binding:*:DecimalType">COMMAND_CLASS_SENSOR_MULTILEVEL;type=TEMPERATURE</property>
         </properties>
       </channel>
       <channel id="alarm_heat" typeId="alarm_heat">
         <label>Alarm (heat)</label>
         <properties>
-          <property name="binding:*:OnOffType">ALARM;type=HEAT</property>
+          <property name="binding:*:OnOffType">COMMAND_CLASS_ALARM;type=HEAT</property>
         </properties>
       </channel>
       <channel id="alarm_flood" typeId="alarm_flood">
         <label>Alarm (flood)</label>
         <properties>
-          <property name="binding:*:OnOffType">ALARM;type=FLOOD</property>
+          <property name="binding:*:OnOffType">COMMAND_CLASS_ALARM;type=FLOOD</property>
         </properties>
       </channel>
       <channel id="alarm_burglar" typeId="alarm_burglar">
         <label>Alarm (burglar)</label>
         <properties>
-          <property name="binding:*:OnOffType">ALARM;type=BURGLAR</property>
+          <property name="binding:*:OnOffType">COMMAND_CLASS_ALARM;type=BURGLAR</property>
         </properties>
       </channel>
       <channel id="battery-level" typeId="system.battery-level">
         <properties>
-          <property name="binding:*:PercentType">BATTERY</property>
+          <property name="binding:*:PercentType">COMMAND_CLASS_BATTERY</property>
         </properties>
       </channel>
     </channels>
@@ -49,128 +49,7 @@
       <property name="manufacturerId">0208</property>
       <property name="manufacturerRef">0201:000F</property>
       <property name="dbReference">674</property>
-      <property name="defaultAssociations">1</property>
     </properties>
-
-    <!-- CONFIGURATION DESCRIPTIONS -->
-    <config-description>
-
-      <!-- PARAMETER DEFINITIONS -->
-      <parameter-group name="configuration">
-        <context>setup</context>
-        <label>Configuration Parameters</label>
-      </parameter-group>
-
-      <parameter name="config_14_1" type="integer" groupName="configuration">
-        <label>14: Enable/Disable Basic Set Command</label>
-        <description>The flood sensor can send BASIC SET command to nodes associated</description>
-        <default>1</default>
-        <options>
-          <option value="0">Disable</option>
-          <option value="1">Enable</option>
-        </options>
-      </parameter>
-
-      <parameter name="config_15_1" type="integer" groupName="configuration">
-        <label>15: value of the Basic Set</label>
-        <description>The flood sensor can send BASIC SET command to nodes associated</description>
-        <default>0</default>
-        <options>
-          <option value="0">Disable</option>
-          <option value="1">Enable</option>
-        </options>
-      </parameter>
-
-      <parameter name="config_17_1" type="integer" groupName="configuration">
-        <label>17: Flooding Alarm</label>
-        <description>Enable/Disable flooding alarm</description>
-        <default>1</default>
-        <options>
-          <option value="0">Disable</option>
-          <option value="1">Enable</option>
-        </options>
-      </parameter>
-
-      <parameter name="config_18_1" type="integer" groupName="configuration">
-        <label>18: Shock Alarm</label>
-        <description>Enable/Disable shock alarm</description>
-        <default>1</default>
-        <options>
-          <option value="0">Disable</option>
-          <option value="1">Enable</option>
-        </options>
-      </parameter>
-
-      <parameter name="config_19_1" type="integer" groupName="configuration">
-        <label>19: High Temperature Alarm</label>
-        <description>Enable/Disable high temperature alarm</description>
-        <default>1</default>
-        <options>
-          <option value="0">Disable</option>
-          <option value="1">Enable</option>
-        </options>
-      </parameter>
-
-      <parameter name="config_20_2" type="integer" groupName="configuration"
-                 min="-670" max="2570">
-        <label>20: Set the high temperature alarm trigger value</label>
-        <description>Available setting(US):-67°c to -257°c</description>
-        <default>1040</default>
-      </parameter>
-
-      <parameter name="config_21_1" type="integer" groupName="configuration">
-        <label>21: Low Temperature Alarm</label>
-        <description>Enable/Disable low temperature alarm</description>
-        <default>0</default>
-        <options>
-          <option value="0">Disable</option>
-          <option value="1">Enable</option>
-        </options>
-      </parameter>
-
-      <parameter name="config_22_2" type="integer" groupName="configuration"
-                 min="-670" max="2570">
-        <label>22: Set the low temperature alarm trigger value</label>
-        <description>Available setting(US):-67°c to -257°c</description>
-        <default>0</default>
-      </parameter>
-
-      <parameter name="config_24_1" type="integer" groupName="configuration">
-        <label>24: Blinking LED</label>
-        <description>Enable/Disable blinking LED when alarm being triggerd</description>
-        <default>1</default>
-        <options>
-          <option value="0">Disable</option>
-          <option value="1">Enable</option>
-        </options>
-      </parameter>
-
-      <parameter name="config_32_1" type="integer" groupName="configuration"
-                 min="10" max="50">
-        <label>32: Level of low battery</label>
-        <description>This parameter defines a battery level as the "low bettery"</description>
-        <default>20</default>
-      </parameter>
-
-      <!-- ASSOCIATION DEFINITIONS -->
-      <parameter-group name="association">
-        <context>link</context>
-        <label>Association Groups</label>
-      </parameter-group>
-
-      <parameter name="group_1" type="text" groupName="association" multiple="true">
-        <label>1: Report</label>
-        <description>report the flooding detection,shock detection and the battert level</description>
-        <multipleLimit>5</multipleLimit>
-      </parameter>
-
-      <parameter name="group_2" type="text" groupName="association" multiple="true">
-        <label>2: Send Command</label>
-        <description>Group 2 is assigned to send BASIC SET command</description>
-        <multipleLimit>5</multipleLimit>
-      </parameter>
-
-    </config-description>
 
   </thing-type>
 
