@@ -5,10 +5,10 @@
   xsi:schemaLocation="http://eclipse.org/smarthome/schemas/thing-description/v1.0.0
                       http://eclipse.org/smarthome/schemas/thing-description/v1.0.0">
 
-  <thing-type id="polycontrol_btze_00_000" listed="false">
-    <label>Danalock V3-BTZE Z-Wave controlled door lock with Bluetooth Smart</label>
+  <thing-type id="polycontrol_btze_01_002" listed="false">
+    <label>Danalock V3-BTZE Z-Wave Controlled door lock with Bluetooth Smart</label>
     <description><![CDATA[
-Z-Wave controlled door lock with Bluetooth Smart<br /><h1>Overview</h1><p>Danalock supports: <br />- S0/S2 Z-Wave Security <br />- Bluetooth Smart <br />- Twist Assist <br />- Auto Lock <br />- Hold And Release <br />- Back To Back </p> <br /><h2>Inclusion Information</h2><p>To add or include the Danalock into a Z-Wave network</p> <ol><li> <p>Set the controller in inclusion mode</p> </li> <li> <p>Push the switch once.</p> </li> <li> <p>Wait 5 seconds. </p> </li> </ol><br /><h2>Exclusion Information</h2><p>To remove or exclude the Danalock into a Z-Wave network</p> <ol><li> <p>Set the controller in exclusion mode</p> </li> <li> <p>Push the switch once.</p> </li> <li> <p>Wait 5 seconds. </p> </li> </ol>
+Z-Wave Controlled door lock with Bluetooth Smart<br /><h1>Overview</h1><p>Danalock supports: <br />- S0/S2 Z-Wave Security <br />- Bluetooth Smart <br />- Twist Assist <br />- Auto Lock <br />- Hold And Release <br />- Back To Back</p> <br /><h2>Inclusion Information</h2><p>To add or include the Danalock into a Z-Wave network</p> <ol><li> <p>Set the controller in inclusion mode</p> </li> <li> <p>Push the switch once.</p> </li> <li> <p>Wait 5 seconds. </p> </li> </ol><br /><h2>Exclusion Information</h2><p>To remove or exclude the Danalock into a Z-Wave network</p> <ol><li> <p>Set the controller in exclusion mode</p> </li> <li> <p>Push the switch once.</p> </li> <li> <p>Wait 5 seconds. </p> </li> </ol>
     ]]></description>
 
     <!-- CHANNEL DEFINITIONS -->
@@ -31,7 +31,8 @@ Z-Wave controlled door lock with Bluetooth Smart<br /><h1>Overview</h1><p>Danalo
       <property name="vendor">Poly-control</property>
       <property name="modelId">Danalock V3-BTZE</property>
       <property name="manufacturerId">010E</property>
-      <property name="manufacturerRef">0009:0001</property>
+      <property name="manufacturerRef">0001:0000,0009:0000</property>
+      <property name="versionMin">1.2</property>
       <property name="dbReference">708</property>
       <property name="defaultAssociations">1</property>
     </properties>

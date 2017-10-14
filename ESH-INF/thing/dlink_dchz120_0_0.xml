@@ -62,7 +62,7 @@
       </parameter-group>
 
       <parameter name="config_2_1" type="integer" groupName="configuration"
-                 min="0" max="100">
+                 min="1" max="100">
         <label>2: Basic Set Level</label>
         <description><![CDATA[
 Setting the BASIC command value to turn on the light.<br /><h1>Overview</h1><ul><li>0: Turn off the light.</li> <li>1 - 100: For dimmers 1 to 100 means the light level.</li> <li>255: Turns on the light. (Default) </li> </ul>
@@ -89,7 +89,7 @@ Set the sensitivity for the PIR (Passive Infrared Sensor).<br /><h1>Overview</h1
       </parameter>
 
       <parameter name="config_4_1" type="integer" groupName="configuration"
-                 min="0" max="100">
+                 min="1" max="99">
         <label>4: Light Threshold</label>
         <description><![CDATA[
 Set the illumination threshold to turn on the light. <br /><h1>Overview</h1><p>When the event triggers and the environment illumination is lower than the threshold, the device will turn on the light.</p> <ul><li>0 means turn off illumination detected function. And never turn on the light.</li> <li>1 means darkest. 99 means brightest.</li> <li>100 means turn off illumination detected function. And always turn on the light.  </li> </ul><p>Notice: In none test mode, only the value in 1 to 99 will enable the illumination detected function and update the illumination value.  </p>

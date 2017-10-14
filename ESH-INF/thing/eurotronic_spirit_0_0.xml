@@ -16,55 +16,49 @@ Thermostatic Valve<br /><h1>Overview</h1><h1>Intelligenter Energiesparregler fü
       <channel id="switch_dimmer" typeId="switch_dimmer">
         <label>Dimmer</label>
         <properties>
-          <property name="binding:*:PercentType">SWITCH_MULTILEVEL</property>
-          <property name="binding:Command:OnOffType">SWITCH_MULTILEVEL</property>
+          <property name="binding:*:PercentType">COMMAND_CLASS_SWITCH_MULTILEVEL</property>
+          <property name="binding:Command:OnOffType">COMMAND_CLASS_SWITCH_MULTILEVEL</property>
         </properties>
       </channel>
       <channel id="sensor_temperature" typeId="sensor_temperature">
-        <label>Current temperature</label>
+        <label>Sensor (temperature)</label>
         <properties>
-          <property name="binding:*:DecimalType">SENSOR_MULTILEVEL;type=TEMPERATURE</property>
-        </properties>
-      </channel>
-      <channel id="sensor_report" typeId="sensor_report">
-        <label>External temperature</label>
-        <properties>
-          <property name="binding:*:DecimalType">SENSOR_MULTILEVEL;type=TEMPERATURE</property>
+          <property name="binding:*:DecimalType">COMMAND_CLASS_SENSOR_MULTILEVEL;type=TEMPERATURE</property>
         </properties>
       </channel>
       <channel id="thermostat_mode" typeId="eurotronic_spirit_00_000_thermostat_mode">
         <label>Thermostat mode</label>
         <properties>
-          <property name="binding:*:DecimalType">THERMOSTAT_MODE</property>
+          <property name="binding:*:DecimalType">COMMAND_CLASS_THERMOSTAT_MODE</property>
         </properties>
       </channel>
       <channel id="thermostat_setpoint_heating" typeId="thermostat_setpoint">
         <label>Setpoint (heat)</label>
         <properties>
-          <property name="binding:*:DecimalType">THERMOSTAT_SETPOINT;type=HEATING</property>
+          <property name="binding:*:DecimalType">COMMAND_CLASS_THERMOSTAT_SETPOINT;type=HEATING</property>
         </properties>
       </channel>
       <channel id="thermostat_setpoint_furnace" typeId="thermostat_setpoint">
         <label>Setpoint (energy heat)</label>
         <properties>
-          <property name="binding:*:DecimalType">THERMOSTAT_SETPOINT;type=FURNACE</property>
+          <property name="binding:*:DecimalType">COMMAND_CLASS_THERMOSTAT_SETPOINT;type=FURNACE</property>
         </properties>
       </channel>
       <channel id="alarm_system" typeId="alarm_system">
         <label>Alarm (system)</label>
         <properties>
-          <property name="binding:*:OnOffType">ALARM;type=SYSTEM</property>
+          <property name="binding:*:OnOffType">COMMAND_CLASS_ALARM;type=SYSTEM</property>
         </properties>
       </channel>
       <channel id="alarm_power" typeId="alarm_power">
         <label>Alarm (power)</label>
         <properties>
-          <property name="binding:*:OnOffType">ALARM;type=POWER_MANAGEMENT</property>
+          <property name="binding:*:OnOffType">COMMAND_CLASS_ALARM;type=POWER_MANAGEMENT</property>
         </properties>
       </channel>
       <channel id="battery-level" typeId="system.battery-level">
         <properties>
-          <property name="binding:*:PercentType">BATTERY</property>
+          <property name="binding:*:PercentType">COMMAND_CLASS_BATTERY</property>
         </properties>
       </channel>
     </channels>
@@ -74,26 +68,26 @@ Thermostatic Valve<br /><h1>Overview</h1><h1>Intelligenter Energiesparregler fü
       <property name="vendor">Eurotronics</property>
       <property name="modelId">Spirit</property>
       <property name="manufacturerId">0148</property>
-      <property name="manufacturerRef">0003:0001,0003:0003</property>
+      <property name="manufacturerRef">0003:0001</property>
       <property name="dbReference">710</property>
-      <property name="commandClass:BASIC">Provides access to basic functionality</property>
-      <property name="commandClass:SWITCH_MULTILEVEL">Provides or sets the valve opening degree of the valve Controlling  the valve opening degree requires manufacturer specific mode</property>
-      <property name="commandClass:SENSOR_MULTILEVEL">Provides the measured room temperature</property>
-      <property name="commandClass:THERMOSTAT_MODE">Configures the operation mode</property>
-      <property name="commandClass:THERMOSTAT_SETPOINT">Allows to configure the desired room temperature</property>
-      <property name="commandClass:ASSOCIATION_GROUP_INFO">Allows to group associations</property>
-      <property name="commandClass:DEVICE_RESET_LOCALLY">Informs the Z-Wave Controller that the device was factory reset</property>
-      <property name="commandClass:ZWAVE_PLUS_INFO">Identifies the device as a Z-Wave Plus Device</property>
-      <property name="commandClass:CONFIGURATION">Allows to configure the device settings</property>
-      <property name="commandClass:ALARM">Informs the controller about critical system events/errors</property>
-      <property name="commandClass:MANUFACTURER_SPECIFIC">Provides information about Manufacturer and Product</property>
-      <property name="commandClass:POWERLEVEL">Used to alter the rf-power(required by Z-Wave).</property>
-      <property name="commandClass:PROTECTION">Allows to lock the device(child protection).</property>
-      <property name="commandClass:FIRMWARE_UPDATE_MD">Allows Over the Air Update of the device.</property>
-      <property name="commandClass:BATTERY">Returns the current battery level of the device.</property>
-      <property name="commandClass:ASSOCIATION">Allows to associate with other Z-Wave devices.</property>
-      <property name="commandClass:VERSION">Returns information about the Firmware.</property>
-      <property name="commandClass:SECURITY">Allows encrypted Z-Wave Communication</property>
+      <property name="commandClass:COMMAND_CLASS_BASIC">Provides access to basic functionality</property>
+      <property name="commandClass:COMMAND_CLASS_SWITCH_MULTILEVEL">Provides or sets the valve opening degree of the valve Controlling  the valve opening degree requires manufacturer specific mode</property>
+      <property name="commandClass:COMMAND_CLASS_SENSOR_MULTILEVEL">Provides the measured room temperature</property>
+      <property name="commandClass:COMMAND_CLASS_THERMOSTAT_MODE">Configures the operation mode</property>
+      <property name="commandClass:COMMAND_CLASS_THERMOSTAT_SETPOINT">Allows to configure the desired room temperature</property>
+      <property name="commandClass:COMMAND_CLASS_ASSOCIATION_GRP_INFO">Allows to group associations</property>
+      <property name="commandClass:COMMAND_CLASS_DEVICE_RESET_LOCALLY">Informs the Z-Wave Controller that the device was factory reset</property>
+      <property name="commandClass:COMMAND_CLASS_ZWAVEPLUS_INFO">Identifies the device as a Z-Wave Plus Device</property>
+      <property name="commandClass:COMMAND_CLASS_CONFIGURATION">Allows to configure the device settings</property>
+      <property name="commandClass:COMMAND_CLASS_ALARM">Informs the controller about critical system events/errors</property>
+      <property name="commandClass:COMMAND_CLASS_MANUFACTURER_SPECIFIC">Provides information about Manufacturer and Product</property>
+      <property name="commandClass:COMMAND_CLASS_POWERLEVEL">Used to alter the rf-power(required by Z-Wave).</property>
+      <property name="commandClass:COMMAND_CLASS_PROTECTION">Allows to lock the device(child protection).</property>
+      <property name="commandClass:COMMAND_CLASS_FIRMWARE_UPDATE_MD">Allows Over the Air Update of the device.</property>
+      <property name="commandClass:COMMAND_CLASS_BATTERY">Returns the current battery level of the device.</property>
+      <property name="commandClass:COMMAND_CLASS_ASSOCIATION">Allows to associate with other Z-Wave devices.</property>
+      <property name="commandClass:COMMAND_CLASS_VERSION">Returns information about the Firmware.</property>
+      <property name="commandClass:COMMAND_CLASS_SECURITY">Allows encrypted Z-Wave Communication</property>
       <property name="defaultAssociations">1</property>
     </properties>
 

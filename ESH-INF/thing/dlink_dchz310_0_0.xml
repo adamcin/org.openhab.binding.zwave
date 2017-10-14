@@ -16,24 +16,24 @@ Smoke Detector<br /><h1>Overview</h1><p>The DCH-Z310 mydlink™ Z-Wave Smoke Ala
       <channel id="sensor_binary" typeId="sensor_binary">
         <label>Binary Sensor</label>
         <properties>
-          <property name="binding:*:OnOffType">SENSOR_BINARY</property>
+          <property name="binding:*:OnOffType">COMMAND_CLASS_SENSOR_BINARY</property>
         </properties>
       </channel>
       <channel id="alarm_smoke" typeId="alarm_smoke">
         <label>Alarm (smoke)</label>
         <properties>
-          <property name="binding:*:OnOffType">ALARM;type=SMOKE</property>
+          <property name="binding:*:OnOffType">COMMAND_CLASS_ALARM;type=SMOKE</property>
         </properties>
       </channel>
       <channel id="alarm_burglar" typeId="alarm_burglar">
         <label>Alarm (burglar)</label>
         <properties>
-          <property name="binding:*:OnOffType">ALARM;type=BURGLAR</property>
+          <property name="binding:*:OnOffType">COMMAND_CLASS_ALARM;type=BURGLAR</property>
         </properties>
       </channel>
       <channel id="battery-level" typeId="system.battery-level">
         <properties>
-          <property name="binding:*:PercentType">BATTERY</property>
+          <property name="binding:*:PercentType">COMMAND_CLASS_BATTERY</property>
         </properties>
       </channel>
     </channels>
