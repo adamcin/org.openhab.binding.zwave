@@ -14,26 +14,26 @@
       <channel id="switch_binary" typeId="switch_binary">
         <label>Switch</label>
         <properties>
-          <property name="binding:*:OnOffType">SWITCH_BINARY</property>
+          <property name="binding:*:OnOffType">COMMAND_CLASS_SWITCH_BINARY</property>
         </properties>
       </channel>
       <channel id="switch_dimmer" typeId="switch_dimmer">
         <label>Dimmer</label>
         <properties>
-          <property name="binding:*:PercentType">SWITCH_MULTILEVEL</property>
-          <property name="binding:Command:OnOffType">SWITCH_MULTILEVEL</property>
+          <property name="binding:*:PercentType">COMMAND_CLASS_SWITCH_MULTILEVEL</property>
+          <property name="binding:Command:OnOffType">COMMAND_CLASS_SWITCH_MULTILEVEL</property>
         </properties>
       </channel>
       <channel id="meter_watts" typeId="meter_watts">
         <label>Electric meter (watts)</label>
         <properties>
-          <property name="binding:*:DecimalType">METER;type=E_W</property>
+          <property name="binding:*:DecimalType">COMMAND_CLASS_METER;type=E_W</property>
         </properties>
       </channel>
       <channel id="meter_kwh" typeId="meter_kwh">
         <label>Electric meter (kWh)</label>
         <properties>
-          <property name="binding:*:DecimalType">METER;type=E_KWh</property>
+          <property name="binding:*:DecimalType">COMMAND_CLASS_METER;type=E_KWh</property>
         </properties>
       </channel>
     </channels>
@@ -45,9 +45,6 @@
       <property name="manufacturerId">0086</property>
       <property name="manufacturerRef">0002:0081,0102:0081,0202:0081</property>
       <property name="dbReference">390</property>
-      <property name="commandClass:CENTRAL_SCENE">scene_number</property>
-      <property name="commandClass:CENTRAL_SCENE:1">scene_number</property>
-      <property name="commandClass:CENTRAL_SCENE:2">scene_number</property>
       <property name="defaultAssociations">1</property>
     </properties>
 
