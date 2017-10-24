@@ -14,42 +14,42 @@
       <channel id="sensor_temperature" typeId="sensor_temperature">
         <label>Sensor (temperature)</label>
         <properties>
-          <property name="binding:*:DecimalType">SENSOR_MULTILEVEL;type=TEMPERATURE</property>
+          <property name="binding:*:DecimalType">COMMAND_CLASS_SENSOR_MULTILEVEL;type=TEMPERATURE</property>
         </properties>
       </channel>
       <channel id="alarm_burglar" typeId="alarm_burglar">
         <label>Alarm (burglar)</label>
         <properties>
-          <property name="binding:*:OnOffType">ALARM;type=BURGLAR</property>
+          <property name="binding:*:OnOffType">COMMAND_CLASS_ALARM;type=BURGLAR</property>
         </properties>
       </channel>
       <channel id="alarm_heat" typeId="alarm_heat">
         <label>Alarm (heat)</label>
         <properties>
-          <property name="binding:*:OnOffType">ALARM;type=HEAT</property>
+          <property name="binding:*:OnOffType">COMMAND_CLASS_ALARM;type=HEAT</property>
         </properties>
       </channel>
       <channel id="alarm_flood" typeId="alarm_flood">
         <label>Alarm (flood)</label>
         <properties>
-          <property name="binding:*:OnOffType">ALARM;type=FLOOD</property>
+          <property name="binding:*:OnOffType">COMMAND_CLASS_ALARM;type=FLOOD</property>
         </properties>
       </channel>
       <channel id="battery-level" typeId="system.battery-level">
         <properties>
-          <property name="binding:*:PercentType">BATTERY</property>
+          <property name="binding:*:PercentType">COMMAND_CLASS_BATTERY</property>
         </properties>
       </channel>
       <channel id="alarm_flood1" typeId="alarm_flood">
         <label>Alarm (flood) 1</label>
         <properties>
-          <property name="binding:*:OnOffType">ALARM:1;type=FLOOD</property>
+          <property name="binding:*:OnOffType">COMMAND_CLASS_ALARM:1;type=FLOOD</property>
         </properties>
       </channel>
       <channel id="alarm_flood2" typeId="alarm_flood">
         <label>Alarm (flood) 2</label>
         <properties>
-          <property name="binding:*:OnOffType">ALARM:2;type=FLOOD</property>
+          <property name="binding:*:OnOffType">COMMAND_CLASS_ALARM:2;type=FLOOD</property>
         </properties>
       </channel>
     </channels>
