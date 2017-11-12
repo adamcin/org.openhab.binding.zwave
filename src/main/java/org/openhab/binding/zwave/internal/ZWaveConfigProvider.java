@@ -402,7 +402,7 @@ public class ZWaveConfigProvider implements ConfigDescriptionProvider, ConfigOpt
 
     /**
      * Gets the configuration parameters for a ZWave Thing. If the thing contains no configuration, it will return null.
-     *
+     * 
      * @param type the {@link ThingType} required to retrieve the configuration
      * @return the {@link ConfigDescription}
      */

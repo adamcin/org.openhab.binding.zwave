@@ -897,17 +897,14 @@ public class ZWaveThingHandler extends ConfigStatusThingHandler implements ZWave
                     break;
 
                 case "action":
-                    if ("failed".equals(cfg[1]) && valueObject instanceof BigDecimal
-                            && ((BigDecimal) valueObject).intValue() == ZWaveBindingConstants.ACTION_CHECK_VALUE) {
+                    if ("failed".equals(cfg[1]) && valueObject instanceof Boolean && ((Boolean) valueObject) == true) {
                         controllerHandler.replaceFailedNode(nodeId);
                     }
-                    if ("remove".equals(cfg[1]) && valueObject instanceof BigDecimal
-                            && ((BigDecimal) valueObject).intValue() == ZWaveBindingConstants.ACTION_CHECK_VALUE) {
+                    if ("remove".equals(cfg[1]) && valueObject instanceof Boolean && ((Boolean) valueObject) == true) {
                         controllerHandler.removeFailedNode(nodeId);
                         controllerHandler.checkNodeFailed(nodeId);
                     }
-                    if ("reinit".equals(cfg[1]) && valueObject instanceof BigDecimal
-                            && ((BigDecimal) valueObject).intValue() == ZWaveBindingConstants.ACTION_CHECK_VALUE) {
+                    if ("reinit".equals(cfg[1]) && valueObject instanceof Boolean && ((Boolean) valueObject) == true) {
                         logger.debug("NODE {}: Re-initialising node!", nodeId);
 
                         // Delete the saved XML
@@ -917,15 +914,14 @@ public class ZWaveThingHandler extends ConfigStatusThingHandler implements ZWave
                         controllerHandler.reinitialiseNode(nodeId);
                     }
 
-                    if ("heal".equals(cfg[1]) && valueObject instanceof BigDecimal
-                            && ((BigDecimal) valueObject).intValue() == ZWaveBindingConstants.ACTION_CHECK_VALUE) {
+                    if ("heal".equals(cfg[1]) && valueObject instanceof Boolean && ((Boolean) valueObject) == true) {
                         logger.debug("NODE {}: Starting heal on node!", nodeId);
 
                         controllerHandler.healNode(nodeId);
                     }
 
                     // Don't save the value
-                    valueObject = "";
+                    valueObject = false;
                     break;
 
                 default:
