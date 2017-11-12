@@ -51,8 +51,7 @@ import org.openhab.binding.zwave.internal.protocol.transaction.ZWaveCommandClass
 public class ZWaveThingHandlerTest {
 
     private List<ZWaveCommandClassTransactionPayload> doConfigurationUpdate(String param, Object value) {
-        ThingType thingType = new ThingType(new ThingTypeUID("bindingId", "thingTypeId"), null, "label", null, null,
-                null, null, null);
+        ThingType thingType = ThingTypeBuilder.instance("bindingId", "thingTypeId", "label").build();
         Thing thing = ThingFactory.createThing(thingType, new ThingUID(thingType.getUID(), "thingId"),
                 new Configuration());
 

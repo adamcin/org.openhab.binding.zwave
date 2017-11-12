@@ -14,72 +14,72 @@
       <channel id="sensor_binary" typeId="sensor_binary">
         <label>Binary Sensor</label>
         <properties>
-          <property name="binding:*:OnOffType">SENSOR_BINARY</property>
+          <property name="binding:*:OnOffType">COMMAND_CLASS_SENSOR_BINARY</property>
         </properties>
       </channel>
       <channel id="sensor_co" typeId="sensor_co">
         <label>Carbon Monoxide Sensor</label>
         <properties>
-          <property name="binding:*:DecimalType">SENSOR_MULTILEVEL;type=CARBON_MONOXIDE</property>
+          <property name="binding:*:DecimalType">COMMAND_CLASS_SENSOR_MULTILEVEL;type=CARBON_MONOXIDE</property>
         </properties>
       </channel>
       <channel id="sensor_temperature" typeId="sensor_temperature">
         <label>Sensor (temperature)</label>
         <properties>
-          <property name="binding:*:DecimalType">SENSOR_MULTILEVEL;type=TEMPERATURE</property>
+          <property name="binding:*:DecimalType">COMMAND_CLASS_SENSOR_MULTILEVEL;type=TEMPERATURE</property>
         </properties>
       </channel>
       <channel id="alarm_co" typeId="alarm_co">
         <label>Alarm (CO)</label>
         <properties>
-          <property name="binding:*:OnOffType">ALARM;type=CARBON_MONOXIDE</property>
+          <property name="binding:*:OnOffType">COMMAND_CLASS_ALARM;type=CARBON_MONOXIDE</property>
         </properties>
       </channel>
       <channel id="alarm_heat" typeId="alarm_heat">
         <label>Alarm (heat)</label>
         <properties>
-          <property name="binding:*:OnOffType">ALARM;type=HEAT</property>
+          <property name="binding:*:OnOffType">COMMAND_CLASS_ALARM;type=HEAT</property>
         </properties>
       </channel>
       <channel id="alarm_burglar" typeId="alarm_burglar">
         <label>Alarm (burglar)</label>
         <properties>
-          <property name="binding:*:OnOffType">ALARM;type=BURGLAR</property>
+          <property name="binding:*:OnOffType">COMMAND_CLASS_ALARM;type=BURGLAR</property>
         </properties>
       </channel>
       <channel id="alarm_system" typeId="alarm_system">
         <label>Alarm (system)</label>
         <properties>
-          <property name="binding:*:OnOffType">ALARM;type=SYSTEM</property>
+          <property name="binding:*:OnOffType">COMMAND_CLASS_ALARM;type=SYSTEM</property>
         </properties>
       </channel>
       <channel id="alarm_power" typeId="alarm_power">
         <label>Alarm (power)</label>
         <properties>
-          <property name="binding:*:OnOffType">ALARM;type=POWER_MANAGEMENT</property>
+          <property name="binding:*:OnOffType">COMMAND_CLASS_ALARM;type=POWER_MANAGEMENT</property>
         </properties>
       </channel>
       <channel id="battery-level" typeId="system.battery-level">
         <properties>
-          <property name="binding:*:PercentType">BATTERY</property>
+          <property name="binding:*:PercentType">COMMAND_CLASS_BATTERY</property>
         </properties>
       </channel>
       <channel id="alarm_heat" typeId="alarm_heat">
         <label>Alarm (heat)</label>
         <properties>
-          <property name="binding:*:OnOffType">SENSOR_ALARM;type=HEAT</property>
+          <property name="binding:*:OnOffType">COMMAND_CLASS_SENSOR_ALARM;type=HEAT</property>
         </properties>
       </channel>
       <channel id="alarm_co" typeId="alarm_co">
         <label>Alarm (CO)</label>
         <properties>
-          <property name="binding:*:OnOffType">SENSOR_ALARM;type=CARBON_MONOXIDE</property>
+          <property name="binding:*:OnOffType">COMMAND_CLASS_SENSOR_ALARM;type=CARBON_MONOXIDE</property>
         </properties>
       </channel>
       <channel id="alarm_general" typeId="alarm_general">
         <label>Alarm (general)</label>
         <properties>
-          <property name="binding:*:OnOffType">SENSOR_ALARM;type=GENERAL</property>
+          <property name="binding:*:OnOffType">COMMAND_CLASS_SENSOR_ALARM;type=GENERAL</property>
         </properties>
       </channel>
     </channels>
