@@ -16,137 +16,137 @@ Vivint Element Thermostat w/ other sensors<br /><h2>Inclusion Information</h2><p
       <channel id="sensor_binary" typeId="sensor_binary">
         <label>Binary Sensor</label>
         <properties>
-          <property name="binding:*:OnOffType">SENSOR_BINARY</property>
+          <property name="binding:*:OnOffType">COMMAND_CLASS_SENSOR_BINARY</property>
         </properties>
       </channel>
       <channel id="sensor_temperature" typeId="sensor_temperature">
         <label>Sensor (temperature)</label>
         <properties>
-          <property name="binding:*:DecimalType">SENSOR_MULTILEVEL;type=TEMPERATURE</property>
+          <property name="binding:*:DecimalType">COMMAND_CLASS_SENSOR_MULTILEVEL;type=TEMPERATURE</property>
         </properties>
       </channel>
       <channel id="sensor_relhumidity" typeId="sensor_relhumidity">
         <label>Sensor (relative humidity)</label>
         <properties>
-          <property name="binding:*:DecimalType">SENSOR_MULTILEVEL;type=RELATIVE_HUMIDITY</property>
+          <property name="binding:*:DecimalType">COMMAND_CLASS_SENSOR_MULTILEVEL;type=RELATIVE_HUMIDITY</property>
         </properties>
       </channel>
       <channel id="thermostat_mode" typeId="rtc_ct200_00_000_thermostat_mode">
         <label>Thermostat mode</label>
         <properties>
-          <property name="binding:*:DecimalType">THERMOSTAT_MODE</property>
+          <property name="binding:*:DecimalType">COMMAND_CLASS_THERMOSTAT_MODE</property>
         </properties>
       </channel>
       <channel id="thermostat_state" typeId="thermostat_state">
         <label>Thermostat Operating State</label>
         <properties>
-          <property name="binding:*:DecimalType">THERMOSTAT_OPERATING_STATE</property>
+          <property name="binding:*:DecimalType">COMMAND_CLASS_THERMOSTAT_OPERATING_STATE</property>
         </properties>
       </channel>
       <channel id="thermostat_setpoint_cooling" typeId="thermostat_setpoint">
         <label>Setpoint (cooling)</label>
         <properties>
-          <property name="binding:*:DecimalType">THERMOSTAT_SETPOINT;type=COOLING</property>
+          <property name="binding:*:DecimalType">COMMAND_CLASS_THERMOSTAT_SETPOINT;type=COOLING</property>
         </properties>
       </channel>
       <channel id="thermostat_setpoint_heating" typeId="thermostat_setpoint">
         <label>Setpoint (heating)</label>
         <properties>
-          <property name="binding:*:DecimalType">THERMOSTAT_SETPOINT;type=HEATING</property>
+          <property name="binding:*:DecimalType">COMMAND_CLASS_THERMOSTAT_SETPOINT;type=HEATING</property>
         </properties>
       </channel>
       <channel id="thermostat_fanmode" typeId="rtc_ct200_00_000_thermostat_fanmode">
         <label>Thermostat fan mode</label>
         <properties>
-          <property name="binding:*:DecimalType">THERMOSTAT_FAN_MODE</property>
+          <property name="binding:*:DecimalType">COMMAND_CLASS_THERMOSTAT_FAN_MODE</property>
         </properties>
       </channel>
       <channel id="thermostat_fanstate" typeId="rtc_ct200_00_000_thermostat_fanstate">
         <label>Thermostat fan state</label>
         <properties>
-          <property name="binding:*:DecimalType">THERMOSTAT_FAN_STATE</property>
+          <property name="binding:*:DecimalType">COMMAND_CLASS_THERMOSTAT_FAN_STATE</property>
         </properties>
       </channel>
       <channel id="battery-level" typeId="system.battery-level">
         <properties>
-          <property name="binding:*:PercentType">BATTERY</property>
+          <property name="binding:*:PercentType">COMMAND_CLASS_BATTERY</property>
         </properties>
       </channel>
       <channel id="time_offset" typeId="time_offset">
         <label>Clock Time Offset</label>
         <properties>
-          <property name="binding:*:DecimalType">CLOCK</property>
+          <property name="binding:*:DecimalType">COMMAND_CLASS_CLOCK</property>
         </properties>
       </channel>
       <channel id="sensor_temperature1" typeId="sensor_temperature">
         <label>Sensor (temperature) 1</label>
         <properties>
-          <property name="binding:*:DecimalType">SENSOR_MULTILEVEL:1;type=TEMPERATURE</property>
+          <property name="binding:*:DecimalType">COMMAND_CLASS_SENSOR_MULTILEVEL:1;type=TEMPERATURE</property>
         </properties>
       </channel>
       <channel id="sensor_relhumidity1" typeId="sensor_relhumidity">
         <label>Sensor (relative humidity) 1</label>
         <properties>
-          <property name="binding:*:DecimalType">SENSOR_MULTILEVEL:1;type=RELATIVE_HUMIDITY</property>
+          <property name="binding:*:DecimalType">COMMAND_CLASS_SENSOR_MULTILEVEL:1;type=RELATIVE_HUMIDITY</property>
         </properties>
       </channel>
       <channel id="thermostat_mode1" typeId="rtc_ct200_00_000_thermostat_mode">
         <label>Thermostat mode 1</label>
         <properties>
-          <property name="binding:*:DecimalType">THERMOSTAT_MODE:1</property>
+          <property name="binding:*:DecimalType">COMMAND_CLASS_THERMOSTAT_MODE:1</property>
         </properties>
       </channel>
       <channel id="thermostat_state1" typeId="thermostat_state">
         <label>Thermostat Operating State 1</label>
         <properties>
-          <property name="binding:*:DecimalType">THERMOSTAT_OPERATING_STATE:1</property>
+          <property name="binding:*:DecimalType">COMMAND_CLASS_THERMOSTAT_OPERATING_STATE:1</property>
         </properties>
       </channel>
       <channel id="thermostat_setpoint_cooling1" typeId="thermostat_setpoint">
         <label>Setpoint (cooling) 1</label>
         <properties>
-          <property name="binding:*:DecimalType">THERMOSTAT_SETPOINT:1;type=COOLING</property>
+          <property name="binding:*:DecimalType">COMMAND_CLASS_THERMOSTAT_SETPOINT:1;type=COOLING</property>
         </properties>
       </channel>
       <channel id="thermostat_setpoint_heating1" typeId="thermostat_setpoint">
         <label>Setpoint (heating) 1</label>
         <properties>
-          <property name="binding:*:DecimalType">THERMOSTAT_SETPOINT:1;type=HEATING</property>
+          <property name="binding:*:DecimalType">COMMAND_CLASS_THERMOSTAT_SETPOINT:1;type=HEATING</property>
         </properties>
       </channel>
       <channel id="thermostat_fanmode1" typeId="rtc_ct200_00_000_thermostat_fanmode">
         <label>Thermostat fan mode 1</label>
         <properties>
-          <property name="binding:*:DecimalType">THERMOSTAT_FAN_MODE:1</property>
+          <property name="binding:*:DecimalType">COMMAND_CLASS_THERMOSTAT_FAN_MODE:1</property>
         </properties>
       </channel>
       <channel id="thermostat_fanstate1" typeId="rtc_ct200_00_000_thermostat_fanstate">
         <label>Thermostat fan state 1</label>
         <properties>
-          <property name="binding:*:DecimalType">THERMOSTAT_FAN_STATE:1</property>
+          <property name="binding:*:DecimalType">COMMAND_CLASS_THERMOSTAT_FAN_STATE:1</property>
         </properties>
       </channel>
-      <channel id="battery-level1" typeId="system.battery-level">
+      <channel id="battery-level" typeId="system.battery-level">
         <properties>
-          <property name="binding:*:PercentType">BATTERY:1</property>
+          <property name="binding:*:PercentType">COMMAND_CLASS_BATTERY</property>
         </properties>
       </channel>
       <channel id="time_offset1" typeId="time_offset">
         <label>Clock Time Offset 1</label>
         <properties>
-          <property name="binding:*:DecimalType">CLOCK:1</property>
+          <property name="binding:*:DecimalType">COMMAND_CLASS_CLOCK:1</property>
         </properties>
       </channel>
       <channel id="sensor_temperature2" typeId="sensor_temperature">
         <label>Sensor (temperature) 2</label>
         <properties>
-          <property name="binding:*:DecimalType">SENSOR_MULTILEVEL:2,BASIC:2;type=TEMPERATURE</property>
+          <property name="binding:*:DecimalType">COMMAND_CLASS_SENSOR_MULTILEVEL:2,COMMAND_CLASS_BASIC:2;type=TEMPERATURE</property>
         </properties>
       </channel>
       <channel id="sensor_relhumidity2" typeId="sensor_relhumidity">
         <label>Sensor (relative humidity) 2</label>
         <properties>
-          <property name="binding:*:DecimalType">SENSOR_MULTILEVEL:2,BASIC:2;type=RELATIVE_HUMIDITY</property>
+          <property name="binding:*:DecimalType">COMMAND_CLASS_SENSOR_MULTILEVEL:2,COMMAND_CLASS_BASIC:2;type=RELATIVE_HUMIDITY</property>
         </properties>
       </channel>
     </channels>
@@ -158,7 +158,6 @@ Vivint Element Thermostat w/ other sensors<br /><h2>Inclusion Information</h2><p
       <property name="manufacturerId">0098</property>
       <property name="manufacturerRef">C801:001D</property>
       <property name="dbReference">742</property>
-      <property name="defaultAssociations">1</property>
     </properties>
 
     <!-- CONFIGURATION DESCRIPTIONS -->
@@ -179,16 +178,13 @@ Retrieves the HVAC Settings<br /><h1>Overview</h1><p>Byte 1 = HVAC Setup: Normal
         <default>0</default>
       </parameter>
 
-      <parameter name="config_4_1" type="integer" groupName="configuration">
+      <parameter name="config_4_1" type="integer" groupName="configuration"
+                 min="0" max="1">
         <label>4: C-Wire/Battery Status</label>
         <description><![CDATA[
 Query power which source is in use<br /><h1>Overview</h1><p>If 0x01, the thermostat is powered by a C-wire.</p> <p>If 0x02, the thermostat is powered by batteries.</p>
         ]]></description>
         <default>0</default>
-        <options>
-          <option value="1">Powered by C-Wire</option>
-          <option value="2">Powered by battery</option>
-        </options>
       </parameter>
 
       <parameter name="config_5_1" type="integer" groupName="configuration"
@@ -207,7 +203,6 @@ This value determines the reporting threshold<br /><h1>Overview</h1><p>This valu
 Auxiliary / Emergency Heat Pump Mode<br /><h1>Overview</h1><p>If set to 0, auxiliary / emergency heat is disabled.</p> <p>All other values (1-255) enable auxiliary / emergency heat.</p> <p>This can only be enabled when the thermostat is set to Heat Pump mode.</p>
         ]]></description>
         <default>0</default>
-        <advanced>true</advanced>
       </parameter>
 
       <parameter name="config_7_1" type="integer" groupName="configuration">
@@ -277,7 +272,6 @@ Toggle Multicast Mode<br /><h1>Overview</h1><p>If set to 0, Multicast is disable
           <option value="0">Disabled</option>
           <option value="1">Enabled</option>
         </options>
-        <advanced>true</advanced>
       </parameter>
 
       <parameter name="config_13_1" type="integer" groupName="configuration">
@@ -318,7 +312,6 @@ Activate Fan w/ auto shutoff timer<br /><h1>Overview</h1><p>This configuration i
 Temperature Calibration / Offset<br /><h1>Overview</h1><p>This configuration is used to set the temperature offset of the thermostat. The valid values are from -6 to 6. Note: although the thermostat UI can set calibrations in intervals of 0.5°F, this parameter can only accept whole numbers.</p>
         ]]></description>
         <default>0</default>
-        <advanced>true</advanced>
       </parameter>
 
       <parameter name="config_18_1" type="integer" groupName="configuration">
@@ -359,18 +352,6 @@ This value determines the reporting threshold<br /><h1>Overview</h1><p>This valu
 Enable or Disable the Utility Lock<br /><h1>Overview</h1><p>If set to 0, the utility lock is disabled. All other values (1-255) enable the utility lock.</p>
         ]]></description>
         <default>0</default>
-        <advanced>true</advanced>
-      </parameter>
-
-      <!-- ASSOCIATION DEFINITIONS -->
-      <parameter-group name="association">
-        <context>link</context>
-        <label>Association Groups</label>
-      </parameter-group>
-
-      <parameter name="group_1" type="text" groupName="association" multiple="true">
-        <label>1: Z-Wave Plus Lifeline</label>
-        <multipleLimit>2</multipleLimit>
       </parameter>
 
     </config-description>
