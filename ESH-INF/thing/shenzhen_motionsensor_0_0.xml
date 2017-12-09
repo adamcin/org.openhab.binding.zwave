@@ -28,7 +28,7 @@ PIR Motion Sensor<br /><h2>Inclusion Information</h2><p>1. Remove the sensor cov
       <channel id="sensor_temperature" typeId="sensor_temperature">
         <label>Sensor (temperature)</label>
         <properties>
-          <property name="binding:*:DecimalType">SENSOR_MULTILEVEL;type=TEMPERATURE</property>
+          <property name="binding:*:DecimalType">COMMAND_CLASS_SENSOR_MULTILEVEL;type=TEMPERATURE</property>
         </properties>
       </channel>
       <channel id="alarm_burglar" typeId="alarm_burglar">
