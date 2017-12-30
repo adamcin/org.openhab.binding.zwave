@@ -44,7 +44,7 @@
       <channel id="config_decimal_param2" typeId="thermofloor_tf016_01_008_config_decimal_param2">
         <label>Sensor mode</label>
         <properties>
-          <property name="binding:*:DecimalType">CONFIGURATION;parameter=2</property>
+          <property name="binding:*:DecimalType">COMMAND_CLASS_CONFIGURATION;parameter=2</property>
         </properties>
       </channel>
     </channels>
